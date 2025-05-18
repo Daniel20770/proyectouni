@@ -42,7 +42,7 @@ A continuación se describirá cada una de estas etiquetas, a excepción de styl
   <p align="justify">
 Un metadato es un dato que describe a otro dato. En el contexto de las páginas web, los metadatos son información sobre esta, como el autor o el tema del que trata, las palabras clave que mejor representan su contenido o el juego de caracteres empleado. Los metadatos de un documento HTML se expresan en su cabecera mediante la etiqueta <meta>. Al igual que la etiqueta <link>, esta requiere de atributos que proporcionen información adicional. Uno de ellos es charset, con el que se establece el juego de caracteres empleado, imprescindible para que el navegador muestre correctamente la letra ‘ñ’ o los acentos. El que utilizará será UTF-8, por lo que la línea de código que deberá añadir a la cabecera de todos sus documentos será:
   </p>
-  <img src="./imagen17.png" height="50px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/imagen17.png" height="50px" style="display: block; margin: auto;">
   <style >
    .info-box {
    border: 2px solid #286b9c;
@@ -85,7 +85,7 @@ Para que alguien encuentre su página debe proporcionar la máxima información 
   <p align="justify">
 A modo de ejemplo, si introdujera las siguientes etiquetas en la cabecera de una página web, informaría a los buscadores de que yo soy el autor (así, sería posible encontrar esta página a partir de mi nombre), junto con las palabras clave que podría escribir alguien interesado en un libro sobre HTML:
   </p>
-  <img src="./imagen18.png" height="50px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/imagen18.png" height="50px" style="display: block; margin: auto;">
   <p align="justify">
 Aunque la página web no sufrirá ningún cambio de aspecto, los buscadores dispondrán de información muy valiosa que ayudará a localizarla a todos aquellos interesados en algún libro que yo hubiera escrito sobre HTML.
   </p>
@@ -93,18 +93,18 @@ Aunque la página web no sufrirá ningún cambio de aspecto, los buscadores disp
   <p align="justify">
     El título del documento sirve para identiﬁcar una página web, ya que se muestra en la pestaña del navegador. Se establece con la etiqueta title, tal como se ha hecho en la siguiente línea de código:
   </p>
-  <img src="./imagen19.png" height="50px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/imagen19.png" height="50px" style="display: block; margin: auto;">
 <p align="justify">
 Al igual que sucede con los metadatos (aprenderá a añadirlos a una página con la etiqueta meta un poco más adelante), los motores de búsqueda utilizan el título para decidir el grado de coincidencia entre su contenido y lo que busca un usuario. Además, es el texto con el que se guarda la página cuando se agrega a la lista de favoritos del navegador.
 </p>
 <p align="justify">
 Incorpore la etiqueta anterior a la cabecera del código de su primera página, que quedaría así:
 </p>
-<img src="./imagen20.png" height="250px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen20.png" height="250px" style="display: block; margin: auto;">
 <p align="justify">
     Refresque la página o cárguela de nuevo en el navegador. Como puede observar, ahora en la pestaña no aparece el nombre del archivo donde está almacenada sino el título que le acaba de dar.
 </p>
-<img src="./imagen21.png" height="250px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen21.png" height="250px" style="display: block; margin: auto;">
 <style >
    .info-box {
      border: 2px solid #286b9c;
@@ -130,11 +130,11 @@ Los recursos externos son archivos de diversa naturaleza (generalmente, imágene
   <p align="justify">
 La manera de importar el archivo que contiene la imagen de un favicon en una página web es asignar su ruta de acceso al atributo href de la etiqueta <link>. Pero ¿cómo se especiﬁca una ruta? De forma absoluta, tal como aparecía en la barra de direcciones del navegador al abrir el documento HTML de su primera página web, o de forma relativa, a partir de la carpeta (directorio) en la que se encuentra la página web. Para explicar cómo se escribe una ruta de acceso relativa (forma recomendada), se analizarán tres escenarios: • El archivo se encuentra en la misma carpeta que la página web. • El archivo se encuentra en una carpeta creada a partir de la que contiene la página web. • El archivo se encuentra en una carpeta creada a partir de otra anterior a la que contiene la página web. En el primer escenario, imagine que la página web “hola-mundo.html” se encuentra en la carpeta “Capitulo2” dentro de otra llamada “Practicas”. Si el archivo que contiene el icono fuera “mi_favicon.ico” y estuviera situado en la misma carpeta que la página web, la estructura de directorios resultante se podría representar de la siguiente manera:
   </p>
-<img src="./imagen22.png" height="250px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen22.png" height="250px" style="display: block; margin: auto;">
 <p align="justify">
 En este caso, como la página y el recurso externo están en la misma carpeta, la ruta relativa de acceso a dicho archivo sería:
 </p>
-<img src="./imagen24.png" height="100px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen24.png" height="100px" style="display: block; margin: auto;">
 <p align="justify">
 El punto (‘.’) de la ruta representa la carpeta donde se encuentra la página web.
 </p>
@@ -159,15 +159,15 @@ El punto (‘.’) de la ruta representa la carpeta donde se encuentra la págin
   <p align="justify">
     Ahora, imagine un segundo escenario en el que el favicon no está en la misma carpeta que la página web, sino en otra llamada “Imagenes” creada como subcarpeta dentro de “Capitulo2”, tal como se muestra a continuación:
   </p>
-  <img src="./imagen25.png" height="200px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/imagen25.png" height="200px" style="display: block; margin: auto;">
   <p align="justify">
 En ese caso, la ruta de acceso a dicho archivo sería:
   </p>
-  <img src="./iamgen30.png" height="150px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/iamgen30.png" height="150px" style="display: block; margin: auto;">
   <p align="justify">
 Por último, imagine un tercer escenario en el que la carpeta “Imagenes”, donde se encuentra el favicon, no se ha creado como una subcarpeta de “Capitulo2”, sino dentro de “Practicas”:
   </p>
-  <img src="./iamgen31.png" height="150px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/iamgen31.png" height="150px" style="display: block; margin: auto;">
   <p align="justify">
 Los dos puntos de la ruta (‘..’) representan el directorio padre (“Practicas”), aquel dentro del que se ha creado “Imagenes” como subcarpeta.
   </p>
@@ -255,19 +255,19 @@ Por último, para cargar un recurso externo en la página también es necesario 
   <p align="justify">
 En consecuencia, la etiqueta <link> que deberá utilizar para cargar y mostrar la imagen contenida en el archivo “favicon.ico” (almacenado en la carpeta “Imágenes”) al lado del título, es la siguiente:
   </p>
-<img src="./imagen32.png" height="100px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen32.png" height="100px" style="display: block; margin: auto;">
 <p align="justify">
 Añada dicha etiqueta al código de la cabecera de su primera página web, que quedaría así:
 </p>
-<img src="./imagen33.png" height="200px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen33.png" height="200px" style="display: block; margin: auto;">
 <p align="justify">
 Refresque la página o cárguela de nuevo en el navegador. Ahora, en la pestaña verá la imagen del favicon al lado del título.
 </p>
-<img src="./imagen34.png" height="150px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen34.png" height="150px" style="display: block; margin: auto;">
 <p align="justify">
 Un favicon es una imagen muy pequeña, generalmente de 16×16 o 32×32 píxeles. Puede estar almacenada en un archivo con extensión “.png”, “.gif” o, como en el ejemplo anterior, “.ico”. Si quiere utilizar alguno, puede buscar uno que encaje con sus necesidades en Internet o, aún mejor, crearlos usted mismo con un generador de favicones online. Aunque existen muchos disponibles, uno de los fáciles de usar es https://www.favicon.cc/. Fue el empleado para dibujar la inicial de mi nombre (la letra “T”).
 </p>
-<img src="./imagen35.png" height="250px" style="display: block; margin: auto;">
+<img src="./imagenes Unidad 2/imagen35.png" height="250px" style="display: block; margin: auto;">
 <style >
    .info-box {
      border: 2px solid #286b9c;
@@ -293,7 +293,7 @@ Un favicon es una imagen muy pequeña, generalmente de 16×16 o 32×32 píxeles.
   <p align="justify">
 Una vez completada la imagen, solo tiene que descargarla en su ordenador pulsando el botón “Download Favicon”.
   </p>
-  <img src="./imagen36.png" height="200px" style="display: block; margin: auto;">
+  <img src="./imagenes Unidad 2/imagen36.png" height="200px" style="display: block; margin: auto;">
     <a href="index.html">Regresar a la Unidad 2</a>
 </body>
 </html>
