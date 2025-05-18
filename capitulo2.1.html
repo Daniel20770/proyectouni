@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">2.1 Elementos HTML</h2>
+
+    <p align="justify">
+    Los elementos HTML son las piezas con las que se construyen las páginas web. Aunque a lo largo de esta obra se emplearán los términos elemento y etiqueta de forma indistinta, en realidad el primero abarca al segundo, ya que un elemento se compone de: 
+    • Una etiqueta de apertura con cero o más atributos. 
+    • El contenido afectado, que puede ser un texto u otras etiquetas. 
+    • Una etiqueta de cierre. Por lo tanto, y con carácter general, un elemento HTML tiene el siguiente formato:    
+    </p>
+    <img src="./Imagen.png" height="50px" style="display: block; margin: auto;">
+    <p align="justify">
+    Aunque este es el caso general, hay elementos que no tienen atributos, otros que solo requieren una etiqueta (la de inicio) e, incluso, algunos no tienen contenido.
+    </p>
+    <style >
+   .info-box {
+    border: 2px solid #227040;
+    background-color: #93ffc6;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Los nombres de las etiquetas pueden escribirse tanto en mayúscula como en minúscula. Sin embargo, el W3C (consorcio internacional dedicado a la deﬁnición de normas y directrices web) recomienda el uso de minúsculas.
+    </div>
+  </div>
+<p align="justify">
+    Cuando una etiqueta lleva atributos, estos son los encargados de suministrar la información precisa para realizar su función. Por ejemplo, una etiqueta que muestre una imagen requiere un atributo que contenga la ruta de acceso donde está almacenada, la etiqueta de un hipervínculo necesita la dirección de la página a la que se accede, etc.
+</p>
+<style >
+   .info-box {
+    border: 2px solid #227040;
+    background-color: #93ffc6;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Observe que los atributos se separan mediante espacios (no con comas) y que sus valores van siempre entre comillas.
+    </div>
+  </div>
+  <p align="justify">
+Si recuerda, en el capítulo de introducción se utilizó un código HTML de ejemplo en el que se empleaba la etiqueta <a> para crear un hipervínculo mediante el que se podía acceder a la página de búsqueda de Google, cuyo URL se añadió mediante el atributo href:
+  </p>
+  <img src="./imagen2.png" height="50px" style="display: block; margin: auto;">
+  <style >
+   .info-box {
+    border: 2px solid #227040;
+    background-color: #93ffc6;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Si quiere conocer la lista completa de los atributos globales (aquellos que se pueden usar en cualquier etiqueta) visite la página https://developer.mozilla.org/es/docs/Web/HTML/Global_attributes
+    </div>
+  </div>
+  <p align="justify">
+Las etiquetas imprescindibles en cualquier página web son las siguientes:
+  </p>
+  <img src="./imagen3.png" height="180px" style="display: block; margin: auto;">
+<p align="justify">
+Aunque la primera línea tenga el aspecto de una etiqueta, en realidad es una directiva que indica al navegador que este documento está escrito en HTML5 (última versión de este lenguaje). Por ese motivo, esta línea siempre deberá situarse al principio del archivo:
+</p>
+<img src="./IMAGEN4.png" height="50px" style="display: block; margin: auto;">
+<style >
+   .info-box {
+    border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        A lo largo de esta obra, para referirse al código HTML de una página web también se utilizará el término documento.
+    </div>
+  </div>
+  <p align="justify">
+El siguiente par de etiquetas son las que realmente contienen el código HTML de la página y conforman el elemento raíz del documento, ya que agrupa a todos los demás:
+  </p>
+  <img src="./imagen5.png" height="100px" style="display: block; margin: auto;">
+  <p align="justify">
+  Como se ha comentado al inicio de esta sección, la función principal de HTML es estructurar el contenido de la página. Para ello, los elementos se anidan unos dentro de otros formando una jerarquía cuya raíz es la etiqueta <html> (representa la página web), debajo de la que se encuentra el cuerpo y la cabecera (etiquetas <head> y <body>): Aunque más adelante se describirán las estructuras jerárquicas, la que forman el cuerpo y la cabecera de una página se puede representar gráﬁcamente así:
+  </p>
+  <img src="./imagen6.png" height="100px" style="display: block; margin: auto;">
+  <p align="justify">
+En la cabecera está la información general de la página, como los metadatos y las referencias a los archivos externos donde se almacenan las hojas de estilo CSS, el código JavaScript, etc.
+  </p>
+  <img src="./imagen7.png" height="100px" style="display: block; margin: auto;">
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Los metadatos reciben este nombre porque son datos que describen otros datos. Aunque no sea información visible, es muy importante porque la utilizan los buscadores para localizar las páginas que mejor se adapten al contenido solicitado por un usuario.
+    </div>
+  </div>
+  <p align="justify">
+Por último, el cuerpo del documento contiene los elementos visibles de la página web:
+  </p>
+  <img src="./imagen8.png" height="100px" style="display: block; margin: auto;">
+  <p align="justify">
+Ahora que ya conoce las etiquetas que no pueden faltar en ninguna página web, en la siguiente sección desarrollará la primera y más sencilla de todas.
+  </p>
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        La lista de todos los elementos HTML los puede encontrar en https://developer.mozilla.org/es/docs/Web/HTML/Element y en https://www.w3schools.com/tags.
+    </div>
+  </div>
+<h2 align="center">2.2 Su primera pàgina web</h2>
+<p align="justify">
+    Una vez conocida la estructura básica de una página web y las etiquetas que intervienen, ya está en condiciones de crear la primera. Por lo tanto, ha llegado la hora de ponerse manos a la obra y empezar a practicar lo aprendido. Pero ¿es necesario algún tipo de entorno de desarrollo para ello? No, ya que una página web es un documento de texto, por lo que podrá editarse con cualquier procesador de texto, por muy sencillo que este sea (por ejemplo, el bloc de notas de Windows o TextEdit si utiliza Mac). En Windows, para abrir el bloc de notas solo tiene que escribir su nombre en el campo de búsqueda situado en la parte inferior izquierda del escritorio y, luego, pulsar sobre él.
+</p>
+<img src="./imagen9.png" height="250px" style="display: block; margin: auto;">
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Si va a trabajar de forma habitual con archivos HTML, le recomiendo usar Visual Estudio Code. Aunque no es un editor especíﬁco de HTML, una vez que detecta ese lenguaje le ofrece inﬁnidad de facilidades que le facilitarán la escritura del código, como la función de autocompletar, el cierre automático de etiquetas, menús contextuales de ayuda sobre la sintaxis o enlaces a la web https://developer.mozilla.org/ en la que se ofrece toda la información que necesite de un elemento determinado. Puede descargarlo desde https://code.visualstudio.com/download.
+    </div>
+  </div>
+  <img src="./imagen10.png" height="250px" style="display: block; margin: auto;">
+  <p align="justify">
+Una vez abierto el editor, escriba el siguiente código:
+  </p>
+<img src="./imagen11.png" height="250px" style="display: block; margin: auto;">
+<p align="justify">
+En dicho código, la única línea cuya sintaxis no se ha explicado es:
+</p>
+<img src="./imagen12.png" height="100px" style="display: block; margin: auto;">
+<p align="justify">
+    Se trata de un comentario. Como en cualquier otro lenguaje de programación, en HTML también se pueden añadir comentarios que ayuden a entender el código. Se trata de líneas de texto que ignora el navegador, ya que van destinadas al desarrollador de la página web. Se utilizan en labores de mantenimiento, sobre todo cuando se trata de páginas complejas. Los comentarios también son útiles durante la fase de depuración de errores, ya que permiten ocultar líneas de código que pueden ser sospechosas de provocarlos. Una vez ﬁnalizado el documento HTML, guárdelo con el nombre “hola-mundo.html”. Si quiere seguir la estructura de carpetas del material descargable del libro, el código de este y los sucesivos ejercicios se encuentra dentro de la carpeta “Practicas”, agrupados en subcarpetas por capítulos (“Capitulo1”, “Capitulo2”, ...). Por lo tanto, el correspondiente a esta primera página web estaría en:
+</p>
+<img src="./imagen13.png" height="250px" style="display: block; margin: auto;">
+<p align="justify">
+Es importante que su extensión sea “.html”, ya que es la correspondiente a los archivos que contienen páginas web. De esta forma, podrá abrirlos desde un navegador. También es importante que, al guardar el archivo, en el campo “Codiﬁcación” elija “UTF-8”. Se trata de un formato de codiﬁcación estándar de caracteres que permite el almacenamiento, la transmisión y, muy especialmente, la correcta visualización de aquellos especíﬁcos de cada idioma, en el caso del español, los acentos y la letra ‘ñ’.
+</p>
+<img src="./imagen14.png" height="250px" style="display: block; margin: auto;">
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Como puede observar en la imagen anterior, he situado la carpeta “Practicas” (obtenida el material descargable) debajo de otra llamada “HTML”, en la que tengo todo lo relacionado con este lenguaje. Naturalmente, usted puede ponerla donde quiera.
+    </div>
+  </div>
+  <p align="justify">
+Ahora, acceda a la carpeta donde guardó el archivo y pulse sobre él con el botón derecho del ratón. En el menú contextual que aparece, seleccione la opción “Abrir con” y, ﬁnalmente, “Google Chrome”.
+  </p>
+  <img src="./imagen15.png" height="250px" style="display: block; margin: auto;">
+  <style >
+   .info-box {
+    border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Aunque en todas las prácticas se haga referencia a Google Chrome, puede utilizar cualquier otro navegador. Si fuera el conﬁgurado por defecto en su ordenador, solo tendría que pulsar dos veces seguidas con el botón izquierdo del ratón sobre el documento HTML (igual que se hace con los archivos de cualquier otra aplicación).
+    </div>
+  </div>
+  <p align="justify">
+Aunque en todas las prácticas se haga referencia a Google Chrome, puede utilizar cualquier otro navegador. Si fuera el conﬁgurado por defecto en su ordenador, solo tendría que pulsar dos veces seguidas con el botón izquierdo del ratón sobre el documento HTML (igual que se hace con los archivos de cualquier otra aplicación).
+  </p>
+  <img src="./imagen16.png" height="200px" style="display: block; margin: auto;">
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Una ruta absoluta es aquella que especiﬁca la ubicación de un archivo desde el directorio raíz, en este caso, el disco duro (“C:/”).
+    </div>
+  </div>
+  <p align="justify">
+    Si quisiera ver cualquier otra página web solo tendría que escribirla en dicha barra de direcciones.
+  </p>
