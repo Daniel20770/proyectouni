@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">2.3 Etiquetas básicas</h2>
+<p align="justify">
+Como sabe, un documento HTML se estructura en una cabecera y un cuerpo. En esta sección estudiará las etiquetas más comunes de la cabecera (las del cuerpo forman parte de una sección posterior). Son las que permiten mostrar el título y el icono de la página en la pestaña del navegador, deﬁnir las reglas de estilo con las que se determina su apariencia, añadir metainformación útil que facilite su localización por parte de los buscadores o importar todo tipo de recursos externos.
+</p>
+<p align="justify">
+Las etiquetas que usará con más frecuencia en la cabecera de un documento HTML son las siguientes: 
+• title. Establece el título del documento. 
+• link. Importa recursos externos, es decir, aquellos que no están incluidos en el propio documento HTML. Se usa para cargar código JavaScript, hojas de estilo y, como pronto descubrirá, imágenes como la del pequeño icono que aparece al lado del título en la pestaña del navegador. 
+• meta. Si en la cabecera es donde se colocan los metadatos de una página web, esta etiqueta es la que mejor representa dicha deﬁnición, ya que normalmente se emplea para identiﬁcar al autor, dar un breve resumen de lo que trata la página, añadir las palabras clave que mejor representen la información contenida (aquellas que introducirían en un buscador las personas interesadas en ella), identiﬁcar el juego de caracteres manejado, etc. 
+• style. Agrupa las reglas de estilo con las que se determina el aspecto de los elementos mostrados en pantalla, por ejemplo, el color o el tamaño del texto de un párrafo. Estas reglas, que se escriben en lenguaje CSS, también son las responsables de la distribución de estos elementos en la página según un diseño o una composición gráﬁca determinada.
+</p>
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Un juego de caracteres especiﬁca la forma en la que un ordenador los representa internamente. Aunque existen distintos estándares, el W3C recomienda el formato de codiﬁcación de caracteres Unicode UTF-8.
+    </div>
+  </div>
+  <p align="justify">
+A continuación se describirá cada una de estas etiquetas, a excepción de style, cuyo estudio se llevará a cabo en el próximo capítulo.
+  </p>
+  <h2 align="center">2.3.1 Metadatos</h2>
+  <p align="justify">
+Un metadato es un dato que describe a otro dato. En el contexto de las páginas web, los metadatos son información sobre esta, como el autor o el tema del que trata, las palabras clave que mejor representan su contenido o el juego de caracteres empleado. Los metadatos de un documento HTML se expresan en su cabecera mediante la etiqueta <meta>. Al igual que la etiqueta <link>, esta requiere de atributos que proporcionen información adicional. Uno de ellos es charset, con el que se establece el juego de caracteres empleado, imprescindible para que el navegador muestre correctamente la letra ‘ñ’ o los acentos. El que utilizará será UTF-8, por lo que la línea de código que deberá añadir a la cabecera de todos sus documentos será:
+  </p>
+  <img src="./imagen17.png" height="50px" style="display: block; margin: auto;">
+  <style >
+   .info-box {
+   border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Observe que esta etiqueta no requiere la correspondiente de cierre.
+    </div>
+  </div>
+  <p align="justify">
+Para que alguien encuentre su página debe proporcionar la máxima información posible a los buscadores. A tal ﬁn, la etiqueta meta se usa con la combinación de atributos name y content. El primero indica de qué trata la información que se va a dar en el segundo. Los valores de la propiedad name más utilizados son: • “author”. Autor de la página. • “description”. Breve resumen de su contenido. • “keywords”. Palabras clave que alguien escribiría en un buscador para encontrarla. El valor de la propiedad content puede ser cualquier texto.
+  </p>
+<style >
+   .info-box {
+    border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        El valor de la propiedad name también podría ser cualquier texto, por ejemplo, “autor” (escrito en castellano) u otro inventado, como “bibliografía”. Sin embargo, se recomienda encarecidamente valerse de términos muy conocidos y en inglés (como los de la lista anterior).
+    </div>
+  </div>
+  <p align="justify">
+A modo de ejemplo, si introdujera las siguientes etiquetas en la cabecera de una página web, informaría a los buscadores de que yo soy el autor (así, sería posible encontrar esta página a partir de mi nombre), junto con las palabras clave que podría escribir alguien interesado en un libro sobre HTML:
+  </p>
+  <img src="./imagen18.png" height="50px" style="display: block; margin: auto;">
+  <p align="justify">
+Aunque la página web no sufrirá ningún cambio de aspecto, los buscadores dispondrán de información muy valiosa que ayudará a localizarla a todos aquellos interesados en algún libro que yo hubiera escrito sobre HTML.
+  </p>
+  <h2 align="center">2.3.2 Título del documento</h2>
+  <p align="justify">
+    El título del documento sirve para identiﬁcar una página web, ya que se muestra en la pestaña del navegador. Se establece con la etiqueta title, tal como se ha hecho en la siguiente línea de código:
+  </p>
+  <img src="./imagen19.png" height="50px" style="display: block; margin: auto;">
+<p align="justify">
+Al igual que sucede con los metadatos (aprenderá a añadirlos a una página con la etiqueta meta un poco más adelante), los motores de búsqueda utilizan el título para decidir el grado de coincidencia entre su contenido y lo que busca un usuario. Además, es el texto con el que se guarda la página cuando se agrega a la lista de favoritos del navegador.
+</p>
+<p align="justify">
+Incorpore la etiqueta anterior a la cabecera del código de su primera página, que quedaría así:
+</p>
+<img src="./imagen20.png" height="250px" style="display: block; margin: auto;">
+<p align="justify">
+    Refresque la página o cárguela de nuevo en el navegador. Como puede observar, ahora en la pestaña no aparece el nombre del archivo donde está almacenada sino el título que le acaba de dar.
+</p>
+<img src="./imagen21.png" height="250px" style="display: block; margin: auto;">
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Hay tres formas distintas de refrescar el contenido de una página web: • Pulsar con el ratón en la barra de direcciones y luego la tecla de retorno de carro. • Presionar la tecla F5. • Pulsar sobre el botón
+    </div>
+  </div>
+  <h2 align="center">2.3.3 Recursos externos</h2>
+  <p align="justify">
+Los recursos externos son archivos de diversa naturaleza (generalmente, imágenes, hojas de estilo o código JavaScript) necesarios para el correcto funcionamiento de una página web. Para incorporarlos a esta, HTML proporciona la etiqueta <link>, que deberá usarse junto con una serie de atributos que determinen su ruta de acceso, la naturaleza de su contenido y el formato en el que está almacenado. Con el ﬁn de mostrar la forma de utilizar esta etiqueta, la empleará para mostrar un icono (favicon) al lado del título en la pestaña del navegador.
+  </p>
+  <p align="justify">
+La manera de importar el archivo que contiene la imagen de un favicon en una página web es asignar su ruta de acceso al atributo href de la etiqueta <link>. Pero ¿cómo se especiﬁca una ruta? De forma absoluta, tal como aparecía en la barra de direcciones del navegador al abrir el documento HTML de su primera página web, o de forma relativa, a partir de la carpeta (directorio) en la que se encuentra la página web. Para explicar cómo se escribe una ruta de acceso relativa (forma recomendada), se analizarán tres escenarios: • El archivo se encuentra en la misma carpeta que la página web. • El archivo se encuentra en una carpeta creada a partir de la que contiene la página web. • El archivo se encuentra en una carpeta creada a partir de otra anterior a la que contiene la página web. En el primer escenario, imagine que la página web “hola-mundo.html” se encuentra en la carpeta “Capitulo2” dentro de otra llamada “Practicas”. Si el archivo que contiene el icono fuera “mi_favicon.ico” y estuviera situado en la misma carpeta que la página web, la estructura de directorios resultante se podría representar de la siguiente manera:
+  </p>
+<img src="./imagen22.png" height="250px" style="display: block; margin: auto;">
+<p align="justify">
+En este caso, como la página y el recurso externo están en la misma carpeta, la ruta relativa de acceso a dicho archivo sería:
+</p>
+<img src="./imagen24.png" height="100px" style="display: block; margin: auto;">
+<p align="justify">
+El punto (‘.’) de la ruta representa la carpeta donde se encuentra la página web.
+</p>
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Aunque los caracteres ‘./’ son opcionales, se recomienda utilizarlos.
+    </div>
+  </div>
+  <p align="justify">
+    Ahora, imagine un segundo escenario en el que el favicon no está en la misma carpeta que la página web, sino en otra llamada “Imagenes” creada como subcarpeta dentro de “Capitulo2”, tal como se muestra a continuación:
+  </p>
+  <img src="./imagen25.png" height="200px" style="display: block; margin: auto;">
+  <p align="justify">
+En ese caso, la ruta de acceso a dicho archivo sería:
+  </p>
+  <img src="./iamgen30.png" height="150px" style="display: block; margin: auto;">
+  <p align="justify">
+Por último, imagine un tercer escenario en el que la carpeta “Imagenes”, donde se encuentra el favicon, no se ha creado como una subcarpeta de “Capitulo2”, sino dentro de “Practicas”:
+  </p>
+  <img src="./iamgen31.png" height="150px" style="display: block; margin: auto;">
+  <p align="justify">
+Los dos puntos de la ruta (‘..’) representan el directorio padre (“Practicas”), aquel dentro del que se ha creado “Imagenes” como subcarpeta.
+  </p>
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Puesto que esta es la estructura de directorios del contenido descargable del libro, será la ruta utilizada en el ejercicio desarrollado en esta sección.
+    </div>
+  </div>
+  <p align="justify">
+Siguiendo este razonamiento de forma recursiva, se podría especiﬁcar la ruta de acceso relativa de cualquier archivo situado en cualquier carpeta creada en la estructura de directorios del ordenador. Se preguntará si el hecho de que la carpeta “Imagenes” no lleve acento es un error. No se ha puesto porque los directorios que forman parte de una ruta no pueden llevarlos. Por otra parte, en las rutas de acceso no se distingue entre mayúsculas y minúsculas. Por lo tanto, el nombre de la carpeta “imagenes” sería el mismo que “Imagenes”.
+  </p>
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Los nombres de archivos o directorios no pueden llevar caracteres especiales como acentos o la letra ‘ñ’.
+    </div>
+  </div>
+  <p align="justify">
+    Solo con asignar la ruta de acceso del favicon al atributo href de la etiqueta link no es suﬁciente para incorporar esta pequeña imagen a la página. Tal como se indicó al principio de la sección, esta etiqueta sirve para integrar recursos externos en el propio documento HTML, que no tiene por qué ser necesariamente un favicon, sino una hoja de estilos, código JavaScript, etc. Por ese motivo, es necesario expresar de forma explícita el tipo de recurso del que se trata, en este caso un icono. Para ello, deberá utilizar el atributo rel, al que tendrá que asignar el valor icon.
+  </p>
+  <style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Como estudiará en una sección posterior, cuando el recurso importado sea una hoja de estilo, el valor de esta propiedad será stylesheet.
+    </div>
+  </div>
+<p align="justify">
+Por último, para cargar un recurso externo en la página también es necesario especiﬁcar el formato del archivo (la extensión del archivo no es indicativo) con la propiedad type. En este caso concreto, su valor es “image/x-icon”.
+</p>
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        El valor del atributo type debe ser uno de los establecidos en el estándar MIME (Multipurpose Internet Mail Extensions, extensiones multipropósito de correo de Internet), que clasiﬁca la naturaleza y el formato de los documentos que se intercambian por Internet. Esta información la utilizará el navegador para visualizar o reproducir los archivos correctamente. Aunque no se pretende describir este estándar, observe que su formato es: “tipo/subtipo” Por eso, si el formato de una imagen fuera jpg, su tipo MIME sería image/jpg. Y si en vez de una imagen fuera un texto normal o HTML, este sería text/plain y text/html, respectivamente. Algo similar sucedería con los archivos de sonido o vídeo.
+    </div>
+  </div>
+  <p align="justify">
+En consecuencia, la etiqueta <link> que deberá utilizar para cargar y mostrar la imagen contenida en el archivo “favicon.ico” (almacenado en la carpeta “Imágenes”) al lado del título, es la siguiente:
+  </p>
+<img src="./imagen32.png" height="100px" style="display: block; margin: auto;">
+<p align="justify">
+Añada dicha etiqueta al código de la cabecera de su primera página web, que quedaría así:
+</p>
+<img src="./imagen33.png" height="200px" style="display: block; margin: auto;">
+<p align="justify">
+Refresque la página o cárguela de nuevo en el navegador. Ahora, en la pestaña verá la imagen del favicon al lado del título.
+</p>
+<img src="./imagen34.png" height="150px" style="display: block; margin: auto;">
+<p align="justify">
+Un favicon es una imagen muy pequeña, generalmente de 16×16 o 32×32 píxeles. Puede estar almacenada en un archivo con extensión “.png”, “.gif” o, como en el ejemplo anterior, “.ico”. Si quiere utilizar alguno, puede buscar uno que encaje con sus necesidades en Internet o, aún mejor, crearlos usted mismo con un generador de favicones online. Aunque existen muchos disponibles, uno de los fáciles de usar es https://www.favicon.cc/. Fue el empleado para dibujar la inicial de mi nombre (la letra “T”).
+</p>
+<img src="./imagen35.png" height="250px" style="display: block; margin: auto;">
+<style >
+   .info-box {
+     border: 2px solid #286b9c;
+    background-color: #93ebff;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /* centra horizontalmente */
+  }
+</style>
+<div class="info-box">
+    <div class="info-text" align="justify">
+        Si experimentara problemas de visualización en Chrome, acceda a esta herramienta desde otro navegador como Edge.
+    </div>
+  </div>
+  <p align="justify">
+    Es muy intuitivo de manejar, por lo que empezará a crear sus propios iconos nada más abrirlo. Puede hacerlo de cero (botón “Create New Favicon”) o cargar una imagen que, con mayor o menor fortuna, la reducirá a un tamaño de 16 × 16 píxeles (botón “Import Image”). Además, en la propia pestaña de la herramienta se muestra cómo quedaría en su página web.
+  </p>
+  <img src="./Captura de pantalla 2025-05-10 200311.png" height="250px" style="display: block; margin: auto;">
+  <p align="justify">
+Una vez completada la imagen, solo tiene que descargarla en su ordenador pulsando el botón “Download Favicon”.
+  </p>
+  <img src="./imagen36.png" height="200px" style="display: block; margin: auto;">
+</body>
+</html>
