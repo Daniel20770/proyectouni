@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h4 align="center">Capitulo 1.2</h4>
+    <h1 align="center">1.2 Qué es CSS?</h1>
+    <p align="justify">
+        Tal como ha podido apreciar en la imagen anterior, aunque HTML muestra cada etiqueta de una forma predeterminada, su presentación es muy pobre y, por descontado, siempre es la misma. Eso es debido a que se centra únicamente en la estructura del contenido, motivo por el que no ofrece facilidades para modiﬁcar, por ejemplo, la fuente o el color de un texto, el tamaño de una imagen, ni mucho menos determinar su posición en la página. Entonces, ¿cómo se consiguen los depurados diseños de las páginas web actuales? Mediante CSS (Cascading Style Sheets, hojas de estilo en cascada), otro lenguaje que, a diferencia de HTML, se centra en todo lo que tiene que ver con el aspecto visual de los elementos y su distribución en pantalla. Ambos lenguajes se complementan, por lo que, actualmente, todas las páginas web se desarrollan como una combinación de código HTML y CSS.
+    </p>
+      <style >
+   .info-box {
+    border: 2px solid #227040;
+    background-color: #93ffc6;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto;
+  }
+</style>
+  <div class="info-box">
+    <div class="info-text" align="justify">
+Además de HTML y CSS, una página web también suele estar compuesta por código JavaScript, lenguaje de programación que dota a la página de características interactivas, como, por ejemplo, las de ofrecer una respuesta dinámica o realizar una serie de tareas al pulsar un botón, rellenar un formulario, etc. Su estudio sale fuera del alcance de esta obra.
+   </div>
+   </div>
+   <p align="justify">
+    Si en HTML se utilizaban etiquetas, con CSS manejará reglas de estilo mediante las que se asignan los diferentes valores que deberá tener cada una de las propiedades visuales de los elementos que conforman la página. A modo de ejemplo, si añadiera la siguiente regla CSS al código HTML anterior, modiﬁcaría el aspecto del enlace para que parezca un botón:
+   </p>
+   <img src="./Imagenes Unidad1/html5.png" height="250px" style="display: block; margin: auto;">
+   <p align="justify">
+    Aunque en esta sección no se pretende explicar la sintaxis de una regla de estilo, algo que le llevará gran parte de la lectura de esta obra, se describirá brevemente la forma en la que actúa esta en concreto para modiﬁcar la apariencia del hipervínculo.
+   </p>
+   <p align="justify">
+   La primera parte de la regla, llamada selector, está formada únicamente por la letra “a”, que corresponde al nombre de la etiqueta del hipervínculo, lo que indica que afecta a dicho elemento. Dentro, encerradas entre llaves, están las declaraciones mediante las que se asignan los valores a las diferentes propiedades visuales del hipervínculo. Así, el texto del enlace se escribirá ahora en color blanco sobre un fondo azul (la propiedad color toma el valor white y background-color el valor blue). Con la propiedad padding se crea un espacio alrededor del texto del enlace de 10 píxeles que se rellena con el color de fondo. La propiedad border-radius redondea las esquinas de dicho espacio con la forma de un arco de circunferencia de 10 píxeles de radio. Por último, al asignar el valor none a la propiedad text-decoration se evita que el texto del enlace quede subrayado. De esa forma, se consigue que el hipervínculo tome la apariencia de un botón, tal como puede ver a continuación:
+   </p>
+   <img src="./Imagenes Unidad1/html6.png" height="250px" style="display: block; margin: auto;">
+   <p align="justify">
+    Ahora la página web está formada por código HTML y código CSS. Esta muestra la misma información que la página original, pero tiene un aire diferente. La página original presentaba todos los elementos HTML de forma predeﬁnida, mientras que en la nueva se ha personalizado el aspecto del hipervínculo. Pero, lo más importante es que, cuando quiera volver a cambiarlo, solo tendrá que sustituir la regla de estilo de este elemento por otra distinta, sin necesidad de modiﬁcar el contenido (el código HTML).
+   </p> 
+         <div class="links" style="display: flex; justify-content: space-between; align-items: center; width: 50%;">
+            <a href="capitulo1.1.html"><---Regreso de página</a>
+            <a href="Unidad 1.html" style="display: block; text-align: center;">Casa</a>
+        </div>   
+        
+</body>
+
+</html>
