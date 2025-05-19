@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.5 HIPERVINCULOS</h2>
+
+    <p align="justify">
+     Por defecto, el texto de un hipervínculo aparece en color azul cuando todavía no se ha pulsado, morado si se ha hecho en alguna ocasión o rojo en el momento de hacerlo. En esta sección no solo aprenderá a modiﬁcar dicho color, sino todo aquello que permita cambiar su apariencia para adaptarlo al diseño de la página, como el borde o los márgenes que lo rodean. 
+     Además, dicho aspecto podrá ser diferente dependiendo del estado en el que se encuentre, representado mediante una pseudoclase. Su importancia radica en la posibilidad de formar parte del selector de una regla. En ese caso, esta solo aplicaría a los elementos que se encontrasen en dicho estado. Su sintaxis es la siguiente: 
+     selector : pseudoclase
+     Existe una gran variedad de pseudoclases, pero las más empleadas con los hipervínculos son: 
+     • link. El hipervínculo no ha sido visitado. 
+     • visited. Ha sido visitado alguna vez. 
+     • hover. El ratón pasa por encima. 
+     • active. Se pulsa con el ratón.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si quiere conocer todas las pseudoclases exsitentes visite <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes"target="_blank">https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes</a>
+    </div>
+    </div>
+
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Las pseudoclases se pueden utilizar con cualquier elemento HTML, no solo hipervínculos.
+    </div>
+    </div>
+
+    <p align="justify">
+    Con el ﬁn de probar la ﬂexibilidad que proporciona HTML a la hora de mostrar un hipervínculo en función de su estado, desarrollará un documento HTML que contenga uno cuyo aspecto sea el de un botón, tal como se aprecia a continuación:
+    </p>
+
+    <img src="./imagenes/libro121.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+    La particularidad de este enlace es que, al poner el ratón sobre él, su color cambia a verde y al pulsarlo pasa a ser rojo. El código es el siguiente:
+    </p>
+
+    <img src="./imagenes/libro122.png" height="380" style="display: block; margin: auto;">
+
+    <img src="./imagenes/libro123.png" height="180" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Como puede observar, dentro del cuerpo del documento HTML solo hay un hipervínculo (etiqueta "a"), cuyo enlace muestra el texto “Acceso a Google”. En la cabecera se especiﬁcan los estilos, tanto del cuerpo como del hipervínculo. La regla de estilo del cuerpo se utiliza para centrar el hipervínculo en la ventana del navegador (la propiedad text-align toma el valor center). Además, se crea un margen interno de separación de 50 píxeles (propiedad padding) para separarlo de los bordes de la pantalla.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Podría pensar que sería mejor utilizar la propiedad margin en la regla de estilo del hipervínculo, en vez de padding en la del cuerpo del documento. Sin embargo, como descubrirá en el próximo capítulo, esta propiedad no se tiene en cuenta en los elementos que se muestran en línea (como este). En dicho capítulo aprenderá a subsanar este inconveniente de la forma más adecuada.
+    </div>
+    </div>
+
+    <p align="justify">
+    El hipervínculo tiene una serie de propiedades cuyo valor es el mismo independientemente del estado en el que se encuentre, motivo por el que la regla vinculada a esta etiqueta establece que: 
+    • El color del texto del enlace sea blanco (propiedad color). 
+    • El grosor del margen interno, aquel que se rellenará con el color de fondo, sea de 10 píxeles arriba y abajo, y de 20 píxeles a derecha e izquierda (valores de la propiedad padding). 
+    • Por defecto, el texto de los hipervínculos aparece subrayado. Para evitarlo, se asigna el valor none a la propiedad text- decoration. 
+    • Con el ﬁn de que el enlace sea estéticamente más agradable, se redondean las esquinas 20 píxeles con la propiedad border- radius. 
+    La parte interesante es aquella en la que se deﬁnen los estilos del hipervínculo en cada estado, para lo que se utilizan pseudoclases en los selectores de las reglas correspondientes. En ese sentido, tanto si se hubiera pulsado en alguna ocasión como si no, se quiere que su color de fondo sea azul, motivo por el que la regla de estilo asociado a dichos estados (link y visited) asigna el valor blue a la propiedad background-color. Observe que, para no repetir la regla, en su selector se han combinado las pseudoclases que representan ambos estados. 
+    Las dos últimas reglas hacen algo similar, ya que asignan un color de fondo verde al hipervínculo cuando el ratón se sitúa encima o rojo cuando se pulsa (estados hover y active, respectivamente). 
+    Solo queda abrir esta página en Chrome y comprobar que el aspecto del hipervínculo es el esperado en todos los estados.
+    </p>
+</body>
+</html>

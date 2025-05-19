@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.4 TEXTOS</h2>
+
+    <p align="justify">
+     Aunque las páginas web tienden a ser cada vez más visuales, todas ellas necesitan hacer uso de textos en los títulos de las secciones, en su contenido, en las opciones de la barra de navegación, etc. Por defecto, el navegador muestra el texto de cada etiqueta de forma predeﬁnida, lo que permite distinguir la función que realizan (organizar el contenido, llevar a otras partes del documento o del sitio web, dar información complementaria, etc.). Sin embargo, dicho estilo siempre es el mismo y, por lo general, resulta demasiado austero. 
+     Para salvar esta limitación, CSS proporciona una serie de propiedades que se van a clasiﬁcar según el aspecto visual al que afectan: 
+     • Color. Propiedades color y background-color. 
+     • Fuente. Propiedad font-family. 
+     • Tamaño. Propiedad font-size. 
+     • Alineación. Propiedad text-align. 
+     • Espaciado. Propiedades text-indent, letter-spacing, word-spacing y line-height. 
+     • Formato. Propiedades text-decoration, vertical- align, font-style y font-weight.
+    </p>
+
+     <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   A los valores que se describan en las siguientes secciones para cada una de esas propiedades, deberá añadir los de inherit (hereda el del contenedor donde esté incluido el texto) e initial (la propiedad vuelve a tomar el valor por defecto).
+    </div>
+    </div>
+
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Los valores de todas estas propiedades se heredan, por lo que, si se asociaran a un contenedor, se aplicarían a los textos que contuviera.
+    </div>
+    </div>
+
+    <p align="justify">
+     Las propiedades asociadas al color (color y background-color) ya las conoce porque se han empleado en numerosos ejercicios, motivo por el que no se darán explicaciones adicionales. El resto se expondrán en detalle en las siguientes secciones
+    </p>
+
+    <h2 align="center">3.4.1 Fuente</h2>
+
+    <p align="justify">
+    Una fuente es un tipo de letra, es decir, un conjunto de caracteres alfanuméricos que se distingue del resto por un diseño característico que les da un aspecto coherente. Dicho diseño permite clasiﬁcar cada fuente o tipo de letra por familias, que serán la que deba asignar la propiedad font-family. En HTML existen las siguientes grandes familias: 
+    • Serif. Se caracteriza por las pequeñas líneas o trazos que se extienden desde los extremos de los caracteres, dando un aire reﬁnado a la escritura. 
+    • Sans-serif. Las fuentes de esta familia, a diferencia del anterior, eliminan los trazos superﬂuos, con lo que se consigue un aspecto más simple y actual. Por ese motivo resultan más fáciles de leer que las Serif. 
+    • Monoespace. El rasgo que la hace singular es que el ancho de todas las letras es el mismo. 
+    • Cursive. Imita la escritura humana. 
+    • Fantasy. Su nombre lo dice todo. Aquí cabe cualquier tipo de fuente de carácter decorativo.
+    Las fuentes que suelen admitir la mayoría de los navegadores son las pertenecientes a las dos primeras familias. Si quiere asegurarse de que una página se vea en cualquiera de ellos, se recomienda usar Arial, Verdana, Helvética y Tahoma de la familia Serif; o Times New Roman y Garamond de la familia Sans-serif. También podría emplear la fuente Courier New de la familia Monoespace.
+    </p>
+
+     <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   En <a href="https://www.w3.org/Style/Examples/007/fonts.en.html"target="_blank">https://www.w3.org/Style/Examples/007/fonts.en.html</a>
+    </div>
+    </div>
+
+    <p align="justify">
+     Sin embargo, no se puede asegurar con certeza que dichas fuentes estén instaladas en todos los navegadores. Por ese motivo, es conveniente especiﬁcar siempre fuentes alternativas. De esa forma, si la primera no funcionara el navegador lo intentaría con la siguiente, y así sucesivamente. Finalice siempre la lista con el nombre de la familia (además del obligado punto y coma), tal como puede ver en el siguiente código de ejemplo:
+    </p>
+
+    <img src="./imagenes/libro102.png" height="80" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si desea emplear sus propias fuentes o, simplemente, aquellas de las que no disponga por defecto un navegador, deberá usar la regla @ font-face (no se va a tratar en esta obra).
+    </div>
+    </div>
+
+    <p align="justify">
+     El siguiente código de ejemplo muestra el texto de etiquetas "h1" con una fuente de cada familia:
+    </p>
+
+    <img src="./imagenes/libro103.png" height="280" style="display: block; margin: auto;">
+
+     <p align="justify">
+     formada de varias palabras separadas por espacios, se deben utilizar las comillas simples (va dentro de las dobles, correspondientes al valor de la propiedad style). El tercer y cuarto encabezado utilizan la fuente que tenga deﬁnida por defecto el navegador para las familias cursive y fantasy. A continuación, puede ver el resultado obtenido en Chrome.
+    </p>
+
+    <img src="./imagenes/libro104.png" height="240" style="display: block; margin: auto;">
+
+    <h2 align="center">3.4.2 Tamaño</h2>
+
+    <p align="justify">
+     En un texto, ademas del color y la fuente, tmabién se puede especificar su tamaño con la propiedad font-sizc. Admite los sigueinte valores 
+     • Un número seguido de cualquiera de las unidades de medida que conoce. 
+     • Un porcentaje del tamaño de la fuente utilizada. Una de las unidades de medida especíﬁcas para textos es em, cuyo tamaño es la del ancho de la letra ‘M’ de la fuente actual. Pero, si no quisiera depender de dicha fuente (puede variar según el estilo deﬁnido en cada contenedor), se recomienda la unidad rem, cuya referencia es el tamaño de letra del elemento raíz (etiqueta "html"). En la mayoría de los navegadores suele ser de 16 píxeles.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Otra unidad de medida menos empleada es ex, que toma como referencia el alto de la letra ‘x’ de la fuente actual.
+    </div>
+    </div>
+
+    <p align="justify">
+     Si el tamaño de la fuente fuera un porcentaje, se usaría como referencia el tamaño de la fuente actual (por defecto, la del navegador). Por ejemplo, un valor del 200% aumentaría al doble el tamaño de la fuente y un 50% lo reduciría a la mitad. En el siguiente documento HTML se utilizan tres unidades de medida diferentes:
+    </p>
+
+    <img src="./imagenes/libro105.png" height="440" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Como resultado, las cuatro primeras líneas aparecen con el mismo tamaño, el de la fuente por defecto del navegador (16 píxeles). Las tres últimas líneas lo hacen con un tamaño 2, 3 y 4 veces superior, tal como puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro106.png" height="340" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Una forma alternativa de especiﬁcar el tamaño de una fuente es mediante una serie de medidas predeﬁnidas, representadas por los valores: 
+     • medium. Tamaño con el que se muestra un texto por defecto. 
+     • small, x-small y xx-small. Tamaños prestablecidos más pequeños que el anterior. • large, x-large, xx-large. Tamaños prestablecidos mayores. 
+     Los valores anteriores son absolutos (siempre son el mismo). En cambio, los siguientes son relativos, ya que tienen en cuenta el tamaño de la fuente actual (en muchas ocasiones, heredada del contenedor en el que se encuentran): 
+     • smaller. Reduce el tamaño de la fuente actual en una proporción prestablecida.
+     • larger. Aumenta el tamaño de la fuente actual en una proporción prestablecida. 
+     En la imagen mostrada a continuación puede ver de forma comparativa el aspecto de un texto con algunos de estos valores.
+    </p>
+
+    <img src="./imagenes/libro107.png" height="340" style="display: block; margin: auto;">
+
+    <h2 align="center">3.4.3 Alineación</h2>
+
+    <p align="justify">
+     Aunque CSS proporciona diversas propiedades relacionadas con la alineación de textos, la más utilizada es text-align, cuyo valor determina la forma de hacerlo: 
+     • right. A la derecha. 
+     • left. A la izquierda. 
+     • center. Al centro.
+     • justify. El espacio de una línea se distribuye entre las palabras para que sus bordes se alineen con ambos márgenes (igual que los párrafos de este libro). Con objeto de familiarizarse con el efecto producido por cada uno de los valores de esta propiedad, el siguiente código de ejemplo muestra tres etiquetas "h1", la primera alineada a la derecha, la segunda centrada y la tercera alineada a la izquierda:
+    </p>
+
+    <img src="./imagenes/libro108.png" height="340" style="display: block; margin: auto;">
+
+    <p align="justify">
+     A continuación, se muestra el aspecto de este documento HTML:
+    </p>
+
+    <img src="./imagenes/libro109.png" height="320" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Aunque en esta ocasión el texto se alinea respecto de la página, con carácter general se hace tomando como referencia el ancho del contenedor en el que se encuentre. Para demostrarlo, incluya los encabezados "h1" del código anterior dentro de un contenedor "div", cuyo ancho sea la mitad de la ventana del navegador:
+    </p>
+
+    <img src="./imagenes/libro110.png" height="160" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Al asignar el valor 50% a la propiedad width del contenedor "div", este ocupa la mitad del ancho de la ventana del navegador. Como los encabezados "h1" están dentro de dicho contenedor, estos se alinean a la izquierda, al centro y a la derecha de este, no al de la pantalla.
+    </p>
+
+    <img src="./imagenes/libro111.png" height="180" style="display: block; margin: auto;">
+
+    <h2 align="center">3.4.4 Espaciado</h2>
+
+    <p align="justify">
+     El espaciado establece la separación entre las líneas, las letras o las palabras de un texto. Para llevarlo a cabo, CSS dispone de las siguientes propiedades: 
+     • text-indent. Determina la sangría de la primera línea de un párrafo. 
+     • letter-spacing y word-spacing. Fija el espacio entre letras o entre palabras, respectivamente. 
+     • line-heigh. Especiﬁca el alto de la línea y, por lo tanto, la separación entre líneas. 
+     El uso de la sangría en textos no está reglado, por lo que algunos autores prescinden de ella, mientras que otros la emplean en todos los párrafos o a partir del segundo. La forma de añadir una sangría a un párrafo es mediante la propiedad text-indent, cuyo valor podrá expresarse mediante cualquiera de las unidades de medida admitidas por HTML o como un porcentaje del ancho del contenedor donde se encuentra. 
+     El siguiente código de ejemplo muestra un párrafo con una sangría de 30 píxeles:
+    </p>
+
+    <img src="./imagenes/libro112.png" height="280" style="display: block; margin: auto;">
+
+    <img src="./imagenes/Libro112.2.png" height="180" style="display: block; margin: auto;">
+
+    <p align="justify">
+     El resultado se puede ver a continuación, donde, efectivamente, la primera línea se indenta 30 píxeles:
+    </p>
+
+    <img src="./imagenes/libro113.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Tal como se indicó al principio de esta sección, las propiedades letter-spacing y word-spacing ﬁjan el espacio entre letras y palabras, respectivamente. En ambos casos, podrá especiﬁcar su valor con las unidades de medida admitidas por HTML, pero no como un porcentaje. Si después de modiﬁcarlo quisiera recuperar el espaciado utilizado por defecto en el navegador, deberá asignarle el valor normal. Con objeto de apreciar los efectos de estas propiedades, sustituya el código del cuerpo del documento HTML anterior, por este otro:
+    </p>
+
+    <img src="./imagenes/libro114.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Se trata de tres párrafos, en el primero de los cuales el navegador decide el espaciado utilizado. En cambio, en el segundo y el tercero se ﬁja una separación de 10 píxeles entre caracteres y entre palabras, respectivamente. Observe el resultado producido en cada caso.
+    </p>
+
+    <img src="./imagenes/libro115.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     La ultima de las propiedades de espaciado que falta por describir determina el alto de la línea y, en concsecuencia, la separación entre líneas. Se trata de line-height y sus valores son: 
+     • normal. Valor por defecto. 
+     • Un número seguido de cualquiera de las unidades de medida que ya conoce. 
+     • Un porcentaje del tamaño de la fuente actual. 
+     • Un número que no va seguido de una unidad de medida. En ese caso, la altura se calcula multiplicando dicho número por el tamaño de la fuente actual. 
+     Para probar esta nueva propiedad, sustituya una vez más el código del cuerpo del documento HTML anterior por este otro:
+    </p>
+
+    <img src="./imagenes/libro116.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Ahora solo se muestran dos párrafos. El primero se escribe con un alto de línea por defecto, mientras que el segundo lo hace a doble espacio (el valor de line-height es 2), tal como se puede apreciar a continuación.
+    </p>
+
+    <img src="./imagenes/libro117.png" height="280" style="display: block; margin: auto;">
+
+    <h2 align="center">3.4.5 Formato</h2>
+
+    <p align="justify">
+     Las propiedades que dan formato al texto son aquellas que permiten que este se escriba en negrita, cursiva, subrayado, tachado, como un subíndice o un superíndice, entre otros. Si recuerda, esto mismo también se podía hacer con las etiquetas "b", "i", "u", "del", "sub" y "sup". Aunque el resultado es el mismo, el uso de estas propiedades supone obtener las ventanas asociadas a las reglas de estilo.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   De las etiquetas de formato de texto estudiadas en el capítulo anterior, las únicas para las que no se ha indicado ninguna propiedad equivalente son "mark" y "small". El efecto producido por la primera se podría conseguir con un color de fondo amarillo y el de la segunda con un tamaño de fuente más pequeña.
+    </div>
+    </div>
+
+    <p align="justify">
+     Aunque HTML ofrece muchas propiedades relacionadas con el formato del texto, en esta sección solo se estudiarán las siguientes: 
+     • font-style. Permite escribir un texto en cursiva. 
+     • font-weight. Determina el grosor de los caracteres. 
+     • vertical-align. En general, establece la alineación vertical de un elemento; en este contexto particular, la de un texto. 
+     • text-decoration. Dibuja una línea por encima, por debajo (subrayado) o en medio (tachado) de un texto. 
+     Veamos los valores que se pueden asignar a cada una de estas propiedades (además de initial e inherit). 
+     La propiedad font-style toma los siguientes valores: 
+     • normal. Forma en la que se escribe el texto por defecto. 
+     • italic y oblique. Muestra un estilo de fuente en cursiva. 
+     Por su parte, los valores de la propiedad font-weight son: 
+     • normal. El texto se escribe de la forma habitual (valor por defecto). 
+     • bold y bolder. Los caracteres aparecen en negrita o más gruesos. 
+     • lighter. Los caracteres tienen un grosor inferior al normal. 
+     • Un número entre 100 y 900 a intervalos de 100. Cuanto mayor es el número, más gruesos serán los caracteres. Para que tenga una referencia, el valor 400 equivale a normal, y 700 a bold.
+     La propiedad vertical-align puede tomar numerosos valores, entre los que destacan aquellos que permiten el uso de superíndices o subíndices: 
+     • sub. Escribe un texto como subíndice. 
+     • super. Lo hace como un superíndice.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Todos los valores de esta propiedad los encontrará en <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align</a>
+    </div>
+    </div>
+
+    <p align="justify">
+     La última de las propiedades (text-decoration) en realidad es un atajo de: 
+     • text-decoration-line. El valor de esta propiedad determina si el texto está subrayado (underline) o tachado (line-through). Aunque es menos usado, el valor overline sitúa la línea encima del texto. Su valor por defecto es none, que no dibuja ningún tipo de línea. 
+     • text-decoration-color. Establece el color de la línea (por defecto, el negro). 
+     • text-decoration-style. Sus valores determinan el estilo de la línea. Por defecto, dibuja una línea continua (solid), aunque también podría ser doble (double), discontinua (dashed), de puntos (dotted) u ondulada (wavy). 
+     • text-decoration-thickness. Determina el grosor de la línea. Su valor se especiﬁca mediante cualquiera de las unidades de medida que conoce o como un porcentaje. Generalmente se deja el valor por defecto (auto). Todas estas propiedades se pueden sustituir por text-decoration, por lo que su valor es una combinación de los que tomarían cada uno de ellos:
+     text-decoration linea color estilo y grosor
+     De todos ellos, el unico obligatorio es el primero (línea).
+     A ﬁn de practicar con estas nuevas propiedades, desarrollará un documento HTML que muestre exactamente con el mismo formato, el texto del ejercicio realizado en la sección donde se describieron las etiquetas "i", "b", "del", "sub", "sup", "mark" y "small". ¿Se anima a hacerlo por su cuenta? Si no lo consigue, esta es una posible solución:
+    </p>
+
+    <img src="./imagenes/libro118.png" height="380" style="display: block; margin: auto;">
+
+    <img src="./imagenes/libro119.png" height="580" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Como puede observar, el cuerpo del documento está formado por los mismos párrafos que el utilizado de referencia. La diferencia es que, mientras en el original los cambios de formato se conseguían con etiquetas especíﬁcas, ahora se utiliza únicamente la etiqueta "span", a la que se asocia el identiﬁcador (atributo id) utilizado como selector en la regla de estilo encargada de dar el formato correspondiente. 
+     Por su sencillez, las reglas responsables de escribir el texto en cursiva, negrita, subrayado, tachado y marcado no requieren de ninguna explicación. 
+     Las que se utilizan para subíndices y superíndices, además de la propiedad vertical-align, emplean font-size para reducir el tamaño del texto, ya que así es como lo hacen por defecto las etiquetas "sup" y "sub". 
+     Algo más elaborada es la regla responsable de crear las notas al margen ya que, para que el texto coincida con el mostrado por la etiqueta "small", no es suﬁciente con reducir el tamaño de la fuente con font-size, sino que también hay que aumentar el alto de la línea un 150% (propiedad line-height) y el espaciado entre caracteres (propiedad letter-spacing). 
+     Una vez cargado este archivo en Chrome, la imagen mostrada a continuación le resultará familiar.
+    </p>
+
+    <img src="./imagenes/libro120.png" height="280" style="display: block; margin: auto;">
+</body>
+</html>

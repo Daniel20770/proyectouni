@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.8 SOMBRAS</h2>
+
+  <p align="justify">
+  Todos los elementos HTML que se muestran en una página web son susceptibles de tener una sombra. Esta podrá aplicarse al espacio ocupado por dicho elemento o, si fuera un texto, el de las letras que lo componen. En el primer caso se utiliza la propiedad box-shadow y en el segundo text-sadow. Veamos la sintaxis de estas propiedades y los efectos que se pueden llegar a producir, empezando por la primera. Tal como se acaba de comentar, la propiedad box-shadow afecta al espacio ocupado por el elemento. Su valor puede ser none (por defecto, no se muestra ninguna sombra), además de los consabidos initial e inherit. Sin embargo, este habitualmente es se compone de los siguientes parámetros: offset_horizontal offset-vertical difuminado radio_de_extensión color
+  </p>
+
+  <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si se añadiera inset al final de la lista de parámetros anterior, la sombra aparecería por dentro en vez de por fuera.
+    </div>
+    </div>
+
+  <p align="justify">
+  Lo parámetros oﬀset_horizontal y oﬀset_vertical son los únicos obligatorios y establecen el desplazamiento de la sombra en cada dirección por debajo del elemento. La siguiente imagen los muestra gráﬁcamente:
+  </p>
+
+  <img src="./imagenes/libro147.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Si el valor del oﬀset horizontal fuera negativo, la sombra aparecería a la izquierda. En el caso de ser el vertical, lo haría por arriba. El parámetro difuminado determina el grado de desvanecimiento de la sombra. Cuanto mayor sea, más difuminada estará. El parámetro radio_de_extensión ﬁja el tamaño de la sombra. Cuanto más positivo sea, mayor será el área que ocupe. Si, por el contrario, dicho valor fuera negativo, su superﬁcie sería menor. El parámetro color especiﬁca el color de la sombra. Para ver el efecto obteniendo al añadir una sombra a un encabezado, escriba el siguiente código HTML:
+  </p>
+
+  <img src="./imagenes/libro148.png" height="460" style="display: block; margin: auto;">
+
+  <p align="justify">
+  En el cuerpo del documento solo hay un encabezado "h1", cuyo aspecto se deﬁne en una regla de estilo cuyas primeras declaraciones son auxiliares (no afectan a la sombra). Son las que establecen un margen interno de 10 píxeles y otro externo de 20 píxeles (propiedades padding y margin), un color de fondo azul claro (propiedad background-color) y un ancho ajustado al del propio texto (la propiedad width toma el valor fit-content). La propiedad box- shadow con la que se muestra la sombra, objeto de estudio de esta sección, la pinta de color gris con un desplazamiento tanto horizontal Como vertical de 5 pixeles (no se difuminado ni se ha ampliado o reducido su radio de expansión).
+  A continuación, puede ver el resultado obtenido al cargar este código en Chrome:
+  </p>
+
+  <img src="./imagenes/libro149.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Cambie el signo de los parámetros de offset: box-shadow: -5px 5px 0 0 gray;
+  Ahora la sombra aparece sobre la parte superior izquierda del encabezado, tal como puede observar en esta otra imagen:
+  </p>
+
+  <img src="./imagenes/libro150.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  En efecto, cuando los parámetros que establecen el oﬀset son positivos, la sombra aparece debajo desplazada hacia la derecha. Con valores negativos lo hace arriba desplazada hacia la izquierda. 
+  Para difuminar la sombra, modiﬁque de nuevo el valor asignado a la propiedad box-shadow de esta forma: 
+  box-shadow: 5px 5px 10px 0 gray
+  La siguiente imagen presenta el resultado obtenido en esta ocasión:
+  </p>
+
+  <img src="./imagenes/libro151.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Por ultimo, aumente el radio de expansión de la sombra:
+  Box-shadow: 5px 5px 10px 5px gray;
+  Su aspecto pasará a ser mostrado a continuación:
+  </p>
+
+  <img src="./imagenes/Libro152.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Le animo a que pruebe diferentes combinaciones para tratar de descubrir aquellas que se acercan más a sus gustos. 
+  Los elementos HTML no son los únicos capaces de proyectar una sombra. Las letras de los textos también pueden hacerlo. Para ello, deberá utilizar la propiedad text-shadow, cuyo valor sigue la siguiente sintaxis:
+  offset_horizontal offset_verical radio_de_extensión Color
+  La propiedad text-shadow también puede tomar los valores none (por defecto, no se proyecta ninguna sombra), initial e inherit. 
+  Como puede comprobar, esta propiedad tiene los mismos parámetros que la anterior, salvo difuminado. Y, al igual que aquella, los únicos requeridos son los de oﬀset-horizontal y oﬀset_vertical. 
+  Para probar el efecto producido por esta propiedad se utilizará el siguiente documento HTML:
+  </p>
+
+  <img src="./imagenes/Libro153.png" height="460" style="display: block; margin: auto;">
+
+  <p align="justify">
+  El cuerpo del mensaje consta de dos encabezados "h1", cuyo identiﬁcador (atributo id) será el selector de la regla de estilo con la que les dé el efecto deseado.
+  En la cabecera del documento están las reglas de estilo, la primera de la cuales afecta a los dos encabezados "h1". Su función es auxiliar, ya que se utiliza para separarlos 20 píxeles (propiedad margin) y dejar espacio a las sombras.
+  La regla de estilo del primer encabezado (selector “sombra”) proyecta una sombra de color gris claro desplazada 5 píxeles a la derecha y por debajo de cada letra. La del segundo (selector “neon”) juega con los parámetros de la propiedad text-shadow para ofrecer un efecto de letras de neón de color rojo. Para conseguirlo, la sombra no se desplaza (el oﬀset horizontal y vertical es 0), pero se amplía con un radio de difusión de 4 píxeles. 
+  El resultado de ambos efectos se puede ver a continuación:
+  </p>
+
+  <img src="./imagenes/libro154.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Con el fin de obtener resultados más llamativos, la propiedad text-shadow permite combinar varias sombras. Solo tiene que separarlas por comas, como se ha hecho en estas dos reglas de estilo:
+  </p>
+
+  <img src="./imagenes/libro155.png" height="330" style="display: block; margin: auto;">
+
+  <p align="justify">
+  La primera regla crea un efecto de halo mediante tres sombras: una negra, otra roja y una tercera con un tono más oscuro. Sus oﬀsets son los mismos (1 píxel en horizontal y otro en vertical), por lo que el efecto deseado se consigue modiﬁcando el radio de extensión de cada una de ellas, que se resalta aún más al usar un texto de color blanco (propiedad color). 
+  La segunda regla dibuja un borde negro alrededor de cada letra, que destaca sobre un texto de color claro (propiedad color). A la hora de pintarlo, la propiedad text-shadow combina cuatro sombras en las que los oﬀsets van tomando los valores 0, -1 y 1 de forma alternativa. 
+  Sustituya las reglas de estilo del documento de ejemplo anterior por estas últimas. Luego, modiﬁque los identiﬁcadores de los encabezados "h1" para que coincidan con los utilizados en dichas reglas:
+  </p>
+
+  <img src="./imagenes/libro156.png" height="130" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Una vez guardados los cambios, refresque la página en el navegador. El resultado obtenido deberá ser similar al siguiente:
+  </p>
+
+  <img src="./imagenes/libro157.png" height="130" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Le animo a realizar todas las combinaciones de parámetros y valores que se le ocurran. Los efectos que se pueden llegar a producir son realmente sorprendentes.
+  </p>
+</body>
+</html>

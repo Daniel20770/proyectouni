@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3</title>
+</head>
+<body>
+   <h4 align="center">Unidad 3</h4>
+   <h1 align="center">Estructura de una página web</h1>
+   <p align="justify">
+        Hasta ahora, el contenido de las etiquetas utilizadas en los documentos HTML de ejemplo se ha mostrado de forma predefinida. 
+        Por ejemplo, el texto de los encabezados aparecía en negrita y con tamaños de fuente menores en orden descendente desde (h1) hasta (h6), los enlaces eran de color azul y estaban subrayados, etc. A partir de ahora, aprenderá a utilizar CSS para establecer el aspecto que quiera que tenga cada uno de ellos. 
+        Si con HTML se estructuraba el contenido de una página web, con CSS podrá decidir cómo se muestra en pantalla. Para ello, este lenguaje identiﬁca las propiedades visuales de los elementos HTML y deﬁne los valores que pueden llegar a tener. También deﬁne las distintas formas de aplicar los estilos, que van desde hacerlo dentro de la propia etiqueta hasta en un archivo CSS diferente del que tiene el código HTML. Este será el objeto de estudio de la primera sección del presente capítulo. 
+        En las siguientes secciones se describirán las diferentes formas de especiﬁcar el color, característica visual imprescindible en prácticamente todos los elementos HTML.
+        Luego, conocerá el modelo de caja con el que se determina el tamaño de cualquier elemento teniendo en cuenta los bordes y márgenes existentes. 
+        A continuación, se analizarán las propiedades especíﬁcas de los textos, las imágenes y las listas.
+        En la exposición de los hipervínculos se introducirá el concepto de pseudoclase, necesario para cambiar su apariencia en función del estado en el que se encuentren (visitados, pulsados, etc.). 
+        También se enseñará cómo crear un efecto de sombra en cualquier elemento y, por último, se describirán dos de los valores más comunes en todas las propiedades vistas a lo largo del capítulo: initial e inherit. Se utilizarán para recuperar el valor por defecto o el heredado del contenedor en el que se encuentra el elemento.
+   </p>
+   <style>
+    .info-box {
+    border: 2px solid #7ae0ed;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1500px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    word-wrap: break-word;
+    }
+   </style>
+   <div class="info-box">
+    <div class="info-text" align="justify">
+    La lista de todas las propiedades CSS y sus posibles valores la puede encontrar en
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference" target="_blank">https://developer.mozilla.org/es/docs/Web/CSS/Reference</a>
+    o en
+    <a href="https://www.w3schools.com/cssref/index.php" target="_blank">https://www.w3schools.com/cssref/index.php</a>
+    </div>
+    </div>
+
+   </div>

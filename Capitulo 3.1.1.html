@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center"> 3.1.1 Estilos en línea</h2>
+   <p align="justify">
+    Cuando el ámbito de aplicación de un estilo es el de una etiqueta concreta, la opción más sencilla es utilizar el atributo style de dicha etiqueta, cuyo valor deberá seguir la siguiente sintaxis:
+    style = "propiedad:valor;...;propiedad:valor"
+    Observe que el valor del atributo style va entre comillas y que este se compone de múltiples declaraciones (pares propiedad:valor) separadas por un punto y coma (";")
+   </p>
+   <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    Si  alguno de los valores de una declaración tuviera que ir entre comillas, utilice comillas simples (no dobles).
+    </div>
+</div>
+
+    <div class="info-box">
+        <div class="info-text" align="justify">
+            El punto y como final no es imprescindible, pero se recomienda añadirlo siempre.
+        </div>
+    </div>
+    <div>
+  <p align="justify">
+    En el siguiente código puede ver un ejemplo de uso del atributo <code>style</code>, mediante el que se especifica que el subtítulo de una página (etiqueta <code>&lt;h2&gt;</code>) se escriba en azul sobre un fondo amarillo:  
+  </p>
+
+  <img src="./imagenes/libro2.png" height="400px" style="display: block; margin: auto;">
+
+  <p align="justify">
+    Para ello, se emplean las propiedades <strong>color</strong> y <strong>background-color</strong>, que tendrá ocasión de estudiar más adelante.
+    Al cargar esta página en su navegador, obtendrá el resultado mostrado a continuación:
+  </p>
+
+  <img src="./imagenes/libro7.png" height="310px" style="display: block; margin: auto;">
+</div>
+<p align="justify">
+    Más adelante entenderá por qué en el fondo amarillo se extiende todo el ancho de la ventana del navegador y aprenderá a limitarlo unicamente al texto (o hasta donde quiera).
+
+    Como puede observar, el estilo establecido en una etiqueta con el atributo style solo afecta a dicha etiqueta. Por ese motivo, el siguiente subtitulo (h2) se muestra con su aspecto original.
+
+    El atributo style aplica el estilo a todo el contenido de una etiqueta. Sin emabrgo, hay ocasiones en las que solo se requiere hacerlo en un fragmento. para resolver este problema, deberá añadir la etiqueta <span> como parte de dicho contenido, incluir dentro unicamente el fragmento afectado y definir para este su propio estilo.
+    
+    Por ejemplo, suponga que quiere que solo una de las palabras de un párrafo se escriba sobre un fondo de color amarillo, no todo él. El siguiente código de ejemplo muestra cómo hacerlo:
+</p>
+<img src="./imagenes/libro6.png" height="310" style="display: block; margin: auto;">
+
+<p align="justify">
+    En esta ocasión, ademas del texto, el párrafo incluye la etiqueta "span", dentro de la que se encuentra la palabra que se quiere mostrar sobre de la que se encuentra la palabra que se quiere mostrar sobre un fondo amarillo. Para ello, se utiliza el atributo style de esta última con el fin de asignar el valor yellow a la propiedad background-color. 
+    El resultado lo puede ver a continuación:
+</p>
+<img src="./imagenes/libro5.png" height="180" style="display: block; margin: auto;">
+
+<p align="justify">
+    Como puede comprobar, el texto del párrafo se muestra de la forma habitual, excepto la palabra que se ha incluido dentro de la etiqueta "span"
+</p>
+</body>

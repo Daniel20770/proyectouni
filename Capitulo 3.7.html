@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.7 IMAGENES</h2>
+
+    <p align="justify">
+   Las imágenes son una parte fundamental de cualquier página web. Sin embargo, la etiqueta "img" solo permite modiﬁcar su tamaño mediante los atributos width y height, algo claramente insuﬁciente a la hora de mostrarlas de una forma creativa. Con el ﬁn de ampliar las posibilidades de presentación de este importante recurso informativo, CSS proporciona una serie de propiedades con las que, además de modiﬁcar el ancho y el alto de la imagen, podrá especiﬁcar su opacidad, la forma de los bordes o, incluso, convertirla en un fondo de pantalla. 
+   Veamos en detalle cada una de ellas, ya que serán las que hagan posible darle nuestro toque personal.
+  </p>
+
+    <h2 align="center">3.7.1 Dimensiones</h2>
+
+  <p align="justify">
+   Como sabe, los atributos width y height de la etiqueta "img" permiten escalar el tamaño de una imagen. Eso mismo también lo podrá hacer con las propiedades CSS del mismo nombre. Aunque el resultado producido sea idéntico, obtendrá las ventajas que supone el uso de reglas de estilo. 
+   En este primer código de ejemplo se utilizan ambas propiedades para que la imagen de la Fontana de Trevi (almacenada en el archivo “fontana-di-trevi. jpg”, dentro de la carpeta “Imagenes”) ocupe el 50% del ancho de la pantalla del navegador:
+  </p>
+
+    <img src="./imagenes/libro134.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+   Observe que la propiedad height toma el valor auto. Esto hace que su altura mantenga las proporciones de la imagen y que no se deforme.
+  </p>
+
+  <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Aunque en este caso el uso de la propiedad height es opcional, se recomienda utilizarla.
+    </div>
+    </div>
+
+  <p align="justify">
+   En la imagen mostrada a continuación se puede comprobar que la foto ocupa exactamente la mitad del ancho de la pantalla, independientemente del tamaño de la ventana del navegador.
+  </p>
+
+  <img src="./imagenes/libro135.png" height="260" style="display: block; margin: auto;">
+
+  <h2 align="center">3.7.2 Transparencia</h2>
+
+  <p align="justify">
+   La transparencia determina el grado de opacidad de un elemento. Se establece con la propiedad opacity, que toma un valor decimal comprendido entre 0 (la imagen no se ve porque es completamente transparente) y 1 (su aspecto es el original). Aunque la imagen no se vea, esta seguirá ocupando su espacio (aparecerá vacío).
+  </p>
+
+   <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Recuerde que, en el caso de los colores, la transparencia se consigue con el parámetro alpha.
+    </div>
+    </div>
+
+    <div class="info-box">
+    <div class="info-text" align="justify">
+  Si no quiere que una imagen siga ocupando espacio en la página cuando desaparezca, asigne el valor none a la propiedad display (la estudiará en el siguiente capítulo).
+    </div>
+    </div>
+
+    <p align="justify">
+   A continuación, se puede ver el Coliseo con un grado de trasnparencia de 1,0.8,0.6,0.4,0.2 y 0:
+  </p>
+
+  <img src="./imagenes/libro136.png" height="160" style="display: block; margin: auto;">
+
+   <p align="justify">
+   Advierta que la última imagen no se ve (solo está el hueco que ocupa). Para dar una utilidad práctica a esta nueva propiedad, le propongo desarrollar un código en el que la imagen del Coliseo sea un hipervínculo. Esta se verá semitransparente hasta que sitúe el ratón sobre ella y la pulse para acceder a la web oﬁcial de este importante monumento romano. Con el propósito de hacer más interesante este ejercicio, dicha imagen formará parte de una composición que simule un efecto de una foto polaroid, tal como puede ver a continuación:
+  </p>
+
+  <img src="./imagenes/libro137.png" height="160" style="display: block; margin: auto;">
+
+  <p align="justify">
+   El código de documento HTML utilizado es el sigueinte:
+  </p>
+
+  <img src="./imagenes/libro138.png" height="60" style="display: block; margin: auto;">
+
+  <img src="./imagenes/libro139.png" height="760" style="display: block; margin: auto;">
+
+  <p align="justify">
+   Observe que el cuerpo del documento solo contiene un contenedor "div" que representa el papel fotográﬁco sobre el que se muestra la imagen y el texto. Dicho contenedor incorpora la etiqueta "img" y un párrafo con un texto descriptivo. 
+   La regla de estilo asociada al contenedor "div" deﬁne las propiedades del “papel” fotográﬁco sobre el que se imprime la imagen y el texto. En primer lugar, establece que su tamaño sea la mitad del ancho de la pantalla (la propiedad width toma el valor 50%). También crea un margen interno de 10 píxeles (propiedad padding) para separar la imagen y el texto de los bordes del “papel”, que se dibujan con una línea continua de 1 píxel de grosor (propiedad border). 
+   La regla de estilo del párrafo centra el texto en el papel fotográﬁco (asigna el valor center a la propiedad text-align). 
+   El bloque de declaraciones de la regla de estilo que afecta a la imagen ajusta su ancho al del contenedor (el valor de la propiedad width es 100%) y la hace semitransparente (el valor de la propiedad opacity es 0.5). 
+   La última regla de estilo utiliza la pseudoclase hover para restituir el aspecto original de la imagen al poner el ratón sobre ella (se asigna el valor 1 a la propiedad opacity). 
+   Cargue la página y compruebe que se produce el efecto manifestado a continuación, donde se ve la imagen del Coliseo antes y despues de situar encima el ratón.
+  </p>
+
+  <img src="./imagenes/libro140.png" height="260" style="display: block; margin: auto;">
+
+  <h2 align="center">3.7.3 Bordes</h2>
+
+  <img src="./imagenes/libro141.png" height="460" style="display: block; margin: auto;">
+
+  <p align="justify">
+   En el cuerpo del mensaje únicamente se incluye la etiqueta "img" con la que se muestra la Fontana de Trevi. En la cabecera del documento hay una regla de estilo que afecta a dicha etiqueta, cuya primera declaración hace que el ancho de la imagen coincida con el de la ventana del navegador (el valor de la propiedad width es 100%). Para asegurar que la imagen no se deforme, se asigna el valor auto a la propiedad height (no es imprescindible). Por último, la propiedad border-radius toma un valor de 20 píxeles, que es el tamaño del radio con el que se dibuja el arco con el que se redondean las esquinas. El resultado se puede ver a continuación:
+  </p>
+
+  <img src="./imagenes/libro142.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+   Ahora, asigne el valor 50% a la propiedad border-radius:
+   border-radius:50%
+   Como puede apreciar en la siguiente imagen, este sencillo cambio produce un resultado espectacular:
+  </p>
+
+   <img src="./imagenes/libro143.png" height="260" style="display: block; margin: auto;">
+
+  <h2 align="center">3.7.4 Fondo de pantalla</h2>
+
+  <p align="justify">
+   Si quiere que una imagen sea el fondo de pantalla de una página, no utilice la etiqueta "img" sino la propiedad background-image de la etiqueta "body", cuyo valor deberá seguir el siguiente formato: 
+   url(‘URL o ruta de acceso a la imagen’) 
+   El siguiente código muestra la forma de usar esta nueva propiedad:
+  </p>
+
+  <img src="./imagenes/libro144.png" height="460" style="display: block; margin: auto;">
+
+  <p align="justify">
+   En el cuerpo del mensaje solo hay un párrafo (etiqueta "p") con el texto: “La Fontana de Trevi”. Este se escribirá en la página como si no hubiera ninguna imagen de fondo. Para hacerlo más visible, la regla de estilo asociada a esta etiqueta establece un color de tinta blanco y un tamaño de 40 píxeles (propiedades color y text-size). 
+    La otra regla de estilo afecta al propio cuerpo del documento HTML (selector “body”). La primera declaración especiﬁca la ruta de acceso al archivo donde se almacena la imagen de fondo mediante la propiedad background-image.
+    Esta no suele ir sola, sino acompañada de las siguientes propiedades: 
+    • background-repeat. Cuando la imagen es más pequeña que la ventana del navegador, el valor de esta propiedad indica si se repite (se muestra varias veces, tantas como quepan) o no. En caso aﬁrmativo, también se determina la disposición en la que se irían añadiendo (vertical, horizontal, etc.). Al haberse asignado el valor no-repeat, solo aparecerá una vez. 
+    • background-attachment. Especiﬁca si la imagen se desplaza con el contenido de una página al hacer scroll o permanece ﬁja (opción elegida en este caso, cuyo valor es ﬁxed). 
+    • background-size. El valor de esta última propiedad (cover) asegura que la imagen cubrirá toda la superﬁcie del navegador sin deformarla.
+  </p>
+
+  <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Le animo a que conoczca todos los posibles valores de estas propiedades, ya que puede haber alguno que le resulte interesante.
+    </div>
+    </div>
+
+     <div class="info-box">
+    <div class="info-text" align="justify">
+   Este procedimiento es igualmente válido para asignar una imagen de fondo a cualquier contenedor.
+    </div>
+    </div>
+
+  <p align="justify">
+   A continuación se muestra el aspecto de este documento HTML:
+  </p>
+
+  <img src="./imagenes/libro145.png" height="460" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Si en vez de una imagen quisiera un color de fondo, recuerde que dispone de la propiedad background-color. Solo tendría que asociarla al cuerpo del documento (etiqueta <body>) y asignarle el color que quiera. Sustituya la regla de estilo del cuerpo del documento HTML anterior por esta otra: body {background-color: gray;}
+  Ahora, el resultado sería el siguiente:
+  </p>
+
+  <img src="./imagenes/libro146.png" height="460" style="display: block; margin: auto;">
+</body>
+</html>

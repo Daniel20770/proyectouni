@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.1.3 Hojas de estilo</h2>
+
+    <p align="justify">
+        En páginas profesionales, donde el número de reglas de estilo es muy variado, lo habitual es llevarlas a un archivo independiente. De esa forma, el código HTML quedaría completamente separado del CSS. En ese caso, lo que se hace es añadir una etiqueta "link" en la cabecera del documento HTML cuyo atributo href especiﬁque la ruta de acceso a dicho archivo (o archivos). Con el ﬁn de demostrar la forma de usar una hoja de estilo, cree una carpeta debajo de “Practicas” llamada “CSS” y guarde en ella el siguiente código con el nombre “estilos.css”:
+    </p>
+
+    <img src="./imagenes/libro27.png" height="300" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Como puede comprobar, contiene las reglas de estilo deﬁnidas dentro de la etiqueta "style" en el código de ejemplo del ejercicio anterior.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   La primera línea es una directiva que se recomienda utilizar por seguridad para evitar problemas con nombres que pudieran tener acentos.
+    </div>
+    </div>
+
+    <p align="justify">
+        Ahora modiﬁque el código del documento HTML del ejercicio anterior de forma que ahora quede así:
+    </p>
+
+    <img src="./imagenes/libro28.png" height="370" style="display: block; margin: auto;">
+
+    <p align="justify">
+       En esta ocasión, en la cabecera del documento HTML se ha sustituido la etiqueta "style" por "link". El valor de href es la ruta de acceso a la hoja de estilos (“../css/estilos.css”) y el de rel indica al navegador que se trata de una hoja de estilos (“stylesheet”).
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   La estructura de carpetas utilizada en este ejercicio es:
+    </div>
+    </div>
+
+    <img src="./imagenes/libro29.png" height="190" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Cargue este documento en el navegador y compruebe que el resultado es el mismo del mencionado ejercicio.
+    </p>
+</body>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.6 LISTAS</h2>
+
+    <p align="justify">
+    Como sabe, una lista es una enumeración de elementos. Por defecto, aparecen de forma descendente precedidos por un pequeño círculo (listas desordenadas) o un numero (listas ordenadas). En esta sección aprenderá a sustituir estos marcadores por algunos de los muchos que ofrece CSS de forma predeterminada o, incluso, por imágenes personalizadas. Naturalmente, además de las propiedades especíﬁcas de las listas, podrá utilizar otras de tipo genérico, como las que permiten asignar colores de tinta o de fondo, tanto a la lista como a sus elementos, crear bordes, márgenes, etc. En esta sección estudiará las siguientes propiedades, relacionadas con rasgos visuales especíﬁcos de las listas: 
+    • list-style-type. Determina el tipo de marcador que precede cada elemento de la lista. • list-style-image. Sustituye el marcador por un icono. 
+    • list-style-position. Establece la posición del marcador o la imagen respecto del elemento. 
+    Como se acaba de comentar, los elementos de una lista van precedidos de un marcador que, por defecto, es un pequeño círculo negro en las desordenadas o un número en las ordenadas. Con la propiedad list- style-type podrá sustituirlo por cualquier otro diferente. 
+    Algunos de los marcadores proporcionados por CSS para las listas desordenadas son: 
+    • disc. Círculo relleno. Es el valor por defecto. 
+    • circle. Círculo sin rellenar. 
+    • square. Cuadrado. 
+    • Los marcadores de las listas ordenadas se pueden agrupar en dos clases: 
+    • Numéricos. Los más utilizados son los que ofrecen una numeración decimal (valor por defecto) o la romana (lower-roman y upper-roman, según se utilicen caracteres en minúscula o mayúscula). Alfabéticos. En vez de números, los marcadores son letras. El alfabeto más utilizado es el latino, que corresponde a los valores lower- latin, upper-latin (mayúsculas o minúsculas). Sin embargo, también se pueden usar otros alfabetos, como el griego.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Para conocer todos los valores posibles de esta propiedad, visite la página <a href="https://developer.mozilla.org/es/docs/Web/CSS/list-style-type"target="_blank">https://developer.mozilla.org/es/docs/Web/CSS/list-style-type</a>
+    </div>
+    </div>
+
+    <p align="justify">
+    El siguiente código muestra una lista desordenada en la que el marcador es un círculo vacío:
+    </p>
+
+    <img src="./imagenes/libro124.png" height="360" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Este sería el aspecto exhibido por dicha lista:
+    </p>
+
+    <img src="./imagenes/libro125.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Sustituya la etiqueta "ul" por esta otra:
+    </p>
+
+    <img src="./imagenes/libro126.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Ahora, la lista pasaría a ser ordenanda y sus marcadores seguirían una numeración romana, tal como puede ver en esta otra imagen:
+    </p>
+
+    <img src="./imagenes/libro127.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Puede que los marcadores que proporciona HTML por defecto le resulte aburridos y quiera tener los suyos propios. En ese caso, la propiedad list-style-image le permitie utilizar un icono personalidado. Su valor debe seguir el formato:
+    </p>
+
+    <img src="./imagenes/libro128.png" height="60" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si en vez de un URL o una ruta, el valor de esta propiedad fuera none, no se mostraría ningun marcador. Es el valor por defecto.
+    </div>
+    </div>
+
+    <p align="justify">
+   Modiﬁque de nuevo la etiqueta con la que se creaba la lista desordenada en el código anterior para incluir un icono en forma de aspa almacenado en el archivo “marcador-lista.ico” (localizado en la carpeta “Imagenes”):
+    </p>
+
+    <img src="./imagenes/libro129.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Este cambio provoca el resultado mostrado a continuación
+    </p>
+
+    <img src="./imagenes/libro130.png" height="260" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Al igual que el favicon, dicho icono ha sido desarrollado con el editor online <a href="https://www.favicon.cc/"target="_blank">https://www.favicon.cc/</a>
+    </div>
+    </div>
+
+    <p align="justify">
+   Por último, la propiedad list-style-position establece la posición de los marcadores respecto de los elementos. Sus principales valores son: 
+   • outside. Los marcadores quedan fuera del elemento de la lista. Es el valor por defecto. 
+   • inside. Los marcadores forman parte del elemento de la lista.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Como es habitual, tanto estas propiedades como las anteriores también pueden tomar el valor inherit (heredan el valor asignado en el contenedor donde esté incluida la etiqueta) o initial (la propiedad vuelve a tomar el valor por defecto).
+    </div>
+    </div>
+
+    
+    <p align="justify">
+   Este nuevo código de ejemplo semuestra el efecto producido por ichos valores en una lista:
+    </p>
+
+    <img src="./imagenes/libro131.png" height="560" style="display: block; margin: auto;">
+
+     <p align="justify">
+   Como puede observar, en el cuerpo del documento solo hay una lista desordenada, cuyos elementos le resultarán familiares. En este caso, ninguna de las etiquetas hace uso del atributo style, ya que su aspecto se determina con las dos reglas de estilo creadas en la cabecera del documento, una para la propia lista (selector “ul”) y otra para sus elementos (selector “li”). Empecemos analizando la correspondiente a la lista. En la primera declaración de esta regla de estilo se asigna el valor circle a la propiedad list-style-type para que el marcador de sus elementos sea un círculo sin rellenar. Este quedará fuera del espacio reservado a dichos elementos, ya que la propiedad list- style-position toma el valor outside. El color de fondo de la lista será verde claro (la propiedad background-color toma el valor lightgreen). Como la propiedad width toma el valor fit- content, su ancho se ajustará al de su contenido, es decir, al del elemento más largo. Por último, la propiedad padding crea un margen interno de 10 píxeles. La combinación de las tres propiedades anteriores servirá para enmarcar el espacio ocupado por la lista (recuerde que este adquiere el color de fondo). La regla de estilo de los elementos de la lista establece que su color de fondo sea amarillo claro (la propiedad background-color toma el valor lightyellow). Asimismo, con las propiedades padding y margin se crea un margen interno de 5 píxeles y otro externo de 10 píxeles que enmarca los elementos y los separa entre sí. Además, como el color de fondo de la lista es diferente al de los elementos, se delimita claramente el espacio ocupado por esta y el de cada uno de ellos. El resultado de cargar este código en Chrome se muestra a continuación:
+    </p>
+
+    <img src="./imagenes/libro132.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Como puede apreciar, los marcadores no forman parte de los elementos. Cambie el valor de la propiedad list-style-position por inside. Tal como puede ver en esta otra imagen, ahora los marcadores quedan incorporarlos a dichos elementos:
+    </p>
+
+    <img src="./imagenes/libro133.png" height="260" style="display: block; margin: auto;">
+
+  <p align="justify">
+   Si va a necesitar utilizar varias de las propiedades que acaba de estudiar, se recomienda usar list-style, que agrupa a las tres. Esta propiedad toma tres valores, separados por espacios, en el siguiente orden: 
+   lits-style:tipo posición imagen
+   En consecuencia, las dos declaraciones que formaban parte de la regla de estilo vinculada a la lista en el código anterior: 
+   list-type-type: circle;
+   list-style-position: outside;
+   Se podrían sustituir por esta otra:
+  </p>
+</body>
+</html>

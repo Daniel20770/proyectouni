@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.3 El modelo de caja</h2>
+
+    <p align="justify">
+   Con el ﬁn de mejorar la visualización de los elementos que conforman una página web, HTML proporciona un variado conjunto de propiedades que determinan su aspecto, y entre ellos su tamaño. Precisamente, las que hacen referencia a esta última característica forman parte de un grupo que constituye el modelo de caja, cuyo conocimiento es imprescindible para el correcto diseño gráﬁco de la página. 
+   Según este modelo, cualquier elemento HTML se encuentra dentro de una caja rectangular formada por su propio contenido (un texto, una imagen, una lista, etc.), un margen interno y el borde.
+    </p>
+
+    <img src="./imagenes/libro40.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Si el margen interno es el que hay entre el contenido y el borde, el externo es el que va más allá de este y sirve para separarlo del resto de elementos de la página. Dicha separación es la suma de los márgenes externos de ambos elementos en sentido horizontal, pero solo la del mayor en sentido vertical. La siguiente imagen lo representa gráﬁcamente, ya que muestra tres elementos HTML con sus respectivos márgenes externos, donde se aprecia la separación que habría entre ellos:
+    </p>
+
+    <img src="./imagenes/libro41.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Para establecer el tamaño del contenido, los márgenes o los bordes de un elemento, CSS proporciona las siguientes propiedades:
+   width y height. Determina el ancho y el alto del contenido.
+   • margin. Establece los márgenes externos. 
+   • padding. Fija los márgenes internos. 
+   • border. Especiﬁca aquello que tiene que ver con el borde, como el tipo de línea, el color, el grosor, etc. 
+   En las siguientes secciones se describirán en detalle cada una de estas propiedades. Sin embargo, antes deberá conocer las unidades de medida utilizadas para especiﬁcar el valor de todas ellas.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+  Estas unidades las usará con frecuencia, ya que los elementos HTML que se muestran en pantalla lo hacen siempre con un tamaño determinado.
+    </div>
+    </div>
+
+    <p align="justify">
+   Una longitud se puede expresar de dos formas distintas, que determinan el tipo de unidad de medida utilizado: 
+   • Absoluta. 
+   • Relativa. 
+   Las unidades de medida absolutas establecen un tamaño ﬁjo (siempre el mismo), independientemente del tipo de dispositivo. Son las siguientes: 
+   • in. Pulgadas. El nombre de la unidad procede del inglés “inches” (1 pulgada son 2.54 centímetros). 
+   • cm. Centímetros. 
+   • mm. Milímetros. 
+   • pt. Puntos. No lo confunda con píxeles (1 punto equivale a 1/72 pulgada, aproximadamente 0.35 milímetros).
+   • pc. Picas (1 pica equivale a 12 puntos, es decir, unos 4.23 milímetros)
+   Por lo tanto, el tamaño de un elemento HTML puede ser, por ejemplo, de 2 pulgadas (2in), 3 centímetros (3cm) o 10 puntos (10pt).
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+  Observe que entre el valor y la unidad de medida no hay ningún espacio.
+    </div>
+    </div>
+    
+     <p align="justify">
+   Por el contrario, las unidades de medida relativas requieren de una referencia para obtener el valor deﬁnitivo. En concreto, con HTML se pueden usar las siguientes: 
+   • px. Corresponde al tamaño de un píxel de la pantalla, cuyo tamaño depende de la resolución del dispositivo (aunque, sería más adecuado hablar de la densidad de píxeles por pulgada). 
+   • %. Es un porcentaje del tamaño del elemento contenedor en el que se incluya el elemento. Si no estuviera dentro de ninguno, correspondería al de la ventana del navegador. 
+   • vw y vh. Equivalen al 1% del ancho y el alto de la ventana del navegador, respectivamente. 
+   De forma particular, cuando se trabaja con textos se suelen utilizar la unidad em, que coincide con el ancho de la letra ‘M’ en la fuente utilizada, o rem, que es el de la fuente por defecto del navegador.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+ Estas no son las únicas unidades permitidas por HTML. Si quiere conocerlas todas, visite la página  <a href="https://developer.mozilla.org/es/docs/Web/CSS/length:" target="_blank">
+    (https://developer.mozilla.org/es/docs/Web/CSS/length)
+  </a>
+    </div>
+    </div>
+
+     <p align="justify">
+   A primera vista, seguro que piensa que las unidades absolutas son las más intuitivas y, por lo tanto, se decante por ellas. A ﬁn de cuentas, todos estamos acostumbrados a usarlas en la vida diaria. Sin embargo, se recomienda encarecidamente el uso de las relativas porque, a diferencia de las anteriores, adaptan el tamaño de los elementos HTML a la pantalla del dispositivo en el que se muestran. En consecuencia, si quiere que una página web se vea de forma correcta tanto en una tableta, como en un móvil o un ordenador personal, utilice siempre unidades de relativas.
+    </p>
+
+    <h2 align="center">3.3.1 Ancho y alto del contenido </h2>
+
+    <p align="justify">
+   Todos los elementos visibles de una página web lo hacen con un tamaño susceptible de modiﬁcarse. Según el modelo de caja, sus dimensiones vienen determinadas por el ancho y el alto del contenido del elemento, al que se suma el grosor del margen interno y el borde. En esta sección se describirán las propiedades que determinan únicamente el tamaño del contenido (sin borde ni márgenes), en concreto, width y height. 
+   Los valores que pueden llegar a tomar ambas propiedades son: 
+   • auto. El navegador se encarga de calcular el ancho y el alto del elemento. 
+   • Un número seguido de la unidad de medida utilizada. 
+   • Un porcentaje del tamaño del contenedor en el que se encuentra. 
+   Además de los valores anteriores, tanto width como height pueden tomar el valor:
+   • inherit. Heredan el valor que se hubiera asignado al contenedor donde estén incluidos. 
+   • initial. La propiedad vuelve a tomar el valor por defecto (se supone que ha sido modiﬁcada previamente).
+    </p>
+
+     <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    En la última sección de este capítulo se explican en detalle estos valores tan especiales.
+    </div>
+    </div>
+
+    <p align="justify">
+   Por último, y en el caso de que el elemento sea un contenedor, ambas propiedades también podrán tomar este otro valor: 
+   • fit-content. Ajusta el tamaño del contenedor al del contenido. 
+   Con el ﬁn de practicar con estas importantes propiedades, se utilizará un código de ejemplo compuesto por un contenedor ("div") dentro del que se han incluido cuatro párrafos ("p"):
+    </p>
+
+    <img src="./imagenes/libro42.png" height="360" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Para ver el espacio ocupado por el contenedor y, de esta forma, apreciar con claridad los cambios de tamaño que experimenta al modiﬁcar los valores de las propiedades width y height, se le ha asignado un color de fondo amarillo (el valor de la propiedad background-color es yellow). El documento HTML anterior no hace uso de las propiedades width y height, por lo que el alto y el ancho del contenedor lo deﬁne el navegador (su efecto es el mismo que si les hubiera asignado el valor auto). Como puede ver a continuación, su ancho coincide con el de la pantalla. En cambio, el alto se ajusta al contenido para englobar los cuatro párrafos que agrupa.
+    </p>
+
+    <img src="./imagenes/libro43.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Ahora, añada la propiedad width al estilo de la etiqueta "div" con el ﬁn de reducir su ancho a la mitad del que tiene la ventana del navegador:
+    </p>
+
+    <img src="./imagenes/libro44.png" height="50" style="display: block; margin: auto;">
+
+    <p align="justify">
+   En esta otra imagen se puede comprobar cómo el fondo amarillo pasa a ocupar solo la mitad del ancho de la pantalla.
+    </p>
+
+     <img src="./imagenes/libro45.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Podría pensar que, si asignara un valor del 50% a la propiedad height, el alto del contenedor sería la mitad de la ventana del navegador:
+    </p>
+
+    <img src="./imagenes/libro46.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Sin embargo, al refrescar la página comprobaría que no es así. El motivo es porque no se ha ﬁjado de forma explícita el tamaño de los contenedores dentro de los que se encuentra, en este caso, el de las etiquetas <body> y <html>. Por lo tanto, para que el contenedor <div> ocupe la mitad del alto de la ventana del navegador, deberá hacer los siguientes cambios:
+    </p>
+
+    <img src="./imagenes/libro47.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Estas modiﬁcaciones no serían necesarias si en vez de un %, utilizara vh como unidad de medida (recuerde que representa el 1% del tamaño de la pantalla). En ese caso, el único ajuste que habría que hacer sobre el código original, sería:
+    </p>
+
+    <img src="./imagenes/libro48.png" height="60" style="display: block; margin: auto;">
+
+     <p align="justify">
+   En ambos casos, el resultado sería el siguiente:
+    </p>
+
+    <img src="./imagenes/libro49.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Si lo que quiere es ajustar el ancho del "div" al de su contenido, solo tiene que asignar el valor fit-content a la propiedad width (el alto, como ha comprobado, ya se ajusta automáticamente):
+    </p>
+
+    <img src="./imagenes/libro50.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Esta nueva imagen demuestra que ahora el espacio ocupado por el contenedor coincide con el de su contenido, es decir, el de los cuatro párrafos:
+    </p>
+
+    <img src="./imagenes/libro51.png" height="260" style="display: block; margin: auto;">
+
+    <h2 align="center">3.3.1.1 Desbordamiento </h2>
+
+    <p align="justify">
+   En todos los ejercicios realizados hasta el momento, los contenedores incluían elementos HTML cuyo tamaño era inferior. Pero ¿qué sucedería si eso no fuera así? Para comprobarlo, se utilizará un código HTML muy parecido al utilizado en los ejercicios de la sección anterior:
+    </p>
+
+    <img src="./imagenes/libro52.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Como puede observar, el tamaño del contenedor dentro del que están los cuatro párrafos se limita a 200 × 100 píxeles. Al especiﬁcar unas dimensiones concretas, se asumen estas y se ignoran las de su contenido, que termina saliendo fuera de sus límites, como se aprecia a continuación:
+    </p>
+
+    <img src="./imagenes/libro53.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Observe que el navegador ha dividido el texto del párrafo en varias líneas para acomodarlo al ancho del contenedor. Sin embargo, eso no se puede hacer a lo alto, por lo que este se desborda por abajo. 
+   Con el ﬁn de controlar estas situaciones, HTML ofrece la propiedad overflow, a la que se puede asignar los siguientes valores: 
+   • visible. Aunque el contenido sale fuera del contenedor, se sigue viendo. Es el valor por defecto, mostrado en la imagen anterior. 
+   • hidden. Todo lo que no entra en el contenedor deja de verse.
+   • scroll. Muestra siempre una barra de desplazamiento, independientemente de si el contenido sale fuera del contenedor, o no. 
+   • auto. La barra de desplazamiento solo aparece cuando el contenido desborda el contenedor.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Esta propiedad solo tiene efecto en aquellos elementos que se muestran en modo bloque (en el capítulo de distribución de elementos se estudia cuáles son).
+    </div>
+    </div>
+    
+    <p align="justify">
+   Para demostrar los efectos de esta propiedad, añádala al estilo de la etiqueta "div":
+    </p>
+
+    <img src="./imagenes/libro54.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+   A continuación, se puede advertir el efecto producido al asignar el valor hidden a la propiedad overflow. Como puede comprobar, el texto que no cabe en el contenedor (recuadro amarillo) deja de verse.
+    </p>
+
+    <img src="./imagenes/libro55.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   En cambio, esta otra imagen muestra el resultado obtenido si se hubiera asignado el valor scroll, donde se aprecian las barras de desplazamiento que permitirían leerlo por completo.
+    </p>
+
+    <img src="./imagenes/libro56.png" height="260" style="display: block; margin: auto;">
+
+    <h2 align="center">3.3.1.2 Valores máximos y mínimos </h2>
+
+    <p align="justify">
+   Cuando se especiﬁca el tamaño de un elemento HTML, no solo es posible asignarle un valor concreto mediante las propiedades width y height, sino también un margen entre los que estaría limitado. En ese caso, las propiedades que habría que utilizar son: 
+   • max-height y max-width. 
+   • min-height y min-width. 
+   Las dos primeras determinan la altura o anchura máxima del elemento. Si su contenido fuera más pequeño, no tendría ningún efecto. En caso contrario, este se mostraría según la estrategia establecida en la propiedad overflow. 
+   Las dos últimas propiedades ﬁjan la altura o anchura mínima del elemento. Si su contenido fuera más pequeño, se aplicaría este tamaño. En caso contrario, no tendría ningún efecto. 
+   Los valores que pueden llegar a tener estas propiedades son: 
+   • Un número seguido de una unidad de medida. 
+   • Un porcentaje del tamaño del contenedor en el que se encuentra el elemento. 
+   Además de los valores anteriores, max-height, max-width también pueden tomar el valor none, que no establece ningún valor máximo. Es su valor por defecto. El de las propiedades min-height y min- width es 0.
+   Como sucede con otras muchas propiedades, estas también pueden tomar los valores initial e inherit. El siguiente código demuestra el comportamiento de los elementos que utilizan estas propiedades:
+    </p>
+
+    <img src="./imagenes/libro57.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+   El cuerpo del documento le resultará familiar porque es el mismo manejado en ejercicios anteriores. La diferencia está en el estilo asociado al contenedor que agrupa los cuatro párrafos. Ahora, además de tener un color de fondo amarillo (propiedad background), se ﬁja un ancho máximo de 300 píxeles y un alto mínimo de 200 píxeles (propiedades max-width y min-height). 
+   A continuación, se muestra el resultado obtenido:
+    </p>
+
+    <img src="./imagenes/libro58.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Como el alto de los cuatro párrafos es menor que el valor mínimo, prevalece este último. Además, el ancho del contenedor se ajusta al valor máximo (no ocupa todo el ancho de la pantalla del navegador, que es su comportamiento por defecto). 
+  Esta otra imagen muestra el resultado de añadir dos párrafos más al contenedor, el último de los cuales supera el ancho máximo. Como ahora la altura de todos los párrafos es mayor que la mínima del contenedor, la propiedad min-height deja de tener efecto y el alto del navegador vuelve a ajustarse al de su contenido (comportamiento habitual). Además, el último párrafo se divide en dos líneas para ajustarse al ancho máximo del contenedor.
+    </p>
+
+    <img src="./imagenes/libro59.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Para ﬁnalizar esta sección, me gustaría recordarle que el diseño de una página web no es más que un conjunto de áreas creadas mediante contenedores que tienen un determinado tamaño y ocupan una posición concreta en la pantalla. Si el contenido de dichos contenedores no se ajustara a su tamaño o no se adoptara la estrategia de desbordamiento adecuada, el resultado no coincidirá con el diseño previsto. Téngalo siempre presente, porque con frecuencia es motivo de resultados aparentemente incomprensibles que no se parecen al esperado.
+    </p>
+
+    <h2 align="center">3.3.2 Márgenes</h2>
+
+    <p align="justify">
+  En el modelo de caja, el contenido del elemento HTML se encuentra rodeado por un margen interno, un borde y un margen externo. En esta sección estudiará los márgenes, cuyo tamaño se determina con las propiedades margin y padding. Ambas pueden tomar los siguientes valores: 
+  • Un número seguido de la unidad de medida utilizada. El valor por defecto es 0. 
+  • Un porcentaje del ancho del contenedor en el que se encuentra el elemento. 
+  Si bien los valores anteriores son comunes a ambas propiedades, margin dispone de uno adicional: 
+  • auto. El navegador es el que calcula el margen. 
+  Como verá más adelante, este valor distribuye de forma uniforme el espacio del contenedor en ambos lados del elemento HTML, lo que permite centrarlo horizontalmente.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Al igual que ocurre con otras muchas propiedades de estilo, las correspondientes a los márgenes también pueden tomar los valores initial e inherit.
+    </div>
+    </div>
+
+    <p align="justify">
+  Estas propiedades pueden tomar uno, dos, tres o cuatro valores. En el caso más sencillo, su sintaxis es:
+    </p>
+
+    <img src="./imagenes/libro60.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+  En este supuesto, el valor del espacio interior o exterior que rodea el contenido del elemento (por ejemplo, un texto o una imagen) es el mismo arriba, abajo, a derecha y a izquierda. El extremo opuesto es cuando se requiere que el margen sea diferente en cada uno de los lados, lo que requeriría cuatro valores:
+    </p>
+
+    <img src="./imagenes/libro61.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+  A veces, el margen izquierdo y derecho suele ser el mismo, motivo por el que estas propiedades también pueden tener tres valores:
+    </p>
+
+    <img src="./imagenes/libro62.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Si además de a izquierda y a derecha, el margen de arriba y el de abajo también coincidieran, solo serían necesarios dos valores:
+    </p>
+
+    <img src="./imagenes/libro63.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Si no quiere especiﬁcar todos los márgenes sino el de algún lado en concreto, siempre tiene la posibilidad de hacerlo con las propiedades margin-top, margin-bottom, margin-left y margin-right para los márgenes externos, o bien padding-top, padding- bottom, padding-left y padding-right para los internos. 
+  Con el ﬁn de entender mejor estos conceptos, realizará una primera práctica en la que se muestran dos párrafos con márgenes internos diferentes. Su código es el siguiente:
+    </p>
+
+    <img src="./imagenes/libro64.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+  El primer párrafo tiene un margen interno de 20 píxeles, mientras que el segundo se eleva a 40 píxeles (propiedad padding). Para hacerlos visibles, ambos se pintan de color amarillo (propiedad background- color). La imagen mostrada a continuación pone en evidencia el diferente espesor de la capa amarilla que rodea el texto de los dos párrafos (excepto en el lado derecho, ya que, por defecto, un párrafo ocupa todo el ancho de la ventana del navegador).
+    </p>
+
+    <img src="./imagenes/libro65.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Modiﬁque el texto del primer párrafo y añada al estilo un margen externo de 30 píxeles (propiedad margin):
+    </p>
+
+    <img src="./imagenes/libro66.png" height="160" style="display: block; margin: auto;">
+
+    <p align="justify">
+  Ahora, además del espacio interno de 20 píxeles, alrededor del primer párrafo se crea otro externo de 30 píxeles de grosor. Dicho espacio no adopta el color de fondo del elemento (es exterior a este), de modo que su existencia queda en evidencia por la separación con el resto de elementos de la página (en este caso, con el segundo párrafo) y de los bordes de la ventana del navegador.
+    </p>
+
+    <img src="./imagenes/libro67.png" height="260" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Algunas etiquetas ya se muestran con márgenes por defecto. Ese es el motivo de la separación entre los fondos amarillos de ambos párrafos en la imagen anterior a esta. Además, el navegador añade un margen adicional de separación en la parte superior, derecha e izquierda de la ventana, tal como también se puede comprobar en esa misma imagen.
+    </div>
+    </div>
+
+    <p align="justify">
+  Ahora, sustituya el código anterior por este otro en el que solo hay un párrafo:
+    </p>
+
+    <img src="./imagenes/libro68.png" height="360" style="display: block; margin: auto;">
+
+    <p align="justify">
+ En este caso se utiliza una regla de estilo porque el número de propiedades empieza a ser elevado. De ellas, las relevantes desde el punto de vista de este ejercicio son las dos primeras, con las que se ajusta el ancho del párrafo al del texto (la propiedad width toma el valor fit-content) y se centra horizontalmente (se asigna el valor auto a la propiedad margin).
+    </p>
+
+    <img src="./imagenes/Libro69.png" height="230" style="display: block; margin: auto;">
+
+    <p align="justify">
+ Como puede apreciar en la imagen anterior, el texto permanece siempre centrado horizontalmente, aunque se cambie el tamaño de la ventana del navegador.
+    </p>
+
+    <h2 align="center">3.3.3 Bordes</h2>
+
+    
+    <p align="justify">
+ Siguiendo el modelo de cajas, cualquier elemento de un documento HTML puede tener un borde. Las propiedades que ofrece CSS para establecer sus principales características visuales son: 
+ • border-style. Determina el tipo de línea del borde (sólida, de puntos, discontinua, etc.). 
+ • border-color. Le da color. 
+ • border-width. Fija el ancho de la línea. 
+ • border-radius. Redondea sus esquinas.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+ Estas no son las únicas unidades permitidas por HTML. Si quiere conocerlas todas, visite la página  <a href="https://developer.mozilla.org/enUS/docs/Web/CSS/border:" target="_blank">
+    (https://developer.mozilla.org/enUS/docs/Web/CSS/border)
+  </a>
+    </div>
+    </div>
+
+    <p align="justify">
+        Veamos en detalle los valores que pueden llegar a tomar cada una de ellas. En cualquier caso, y al igual que sucede en otras muchas Veamos en detalle los valores que pueden llegar a tomar cada una de ellas. En cualquier caso, y al igual que sucede en otras muchas propiedades, además de los que se describan en las siguientes líneas, estas tambien podrán llegar a tomar los valores inherit (hereda el del contenedor donde estén incluidos) e initial (la propiedad vuelve a tomar el valor por defecto).
+        El tipo de línea viene determinado por el valor que tome la propiedad border-style, entre los que destacan:
+        • none. No se dibuja ningún borde (es el valor por defecto).
+        • solid. Línea continua. 
+        • double. Línea continua doble. 
+        • dotted. Línea de puntos.
+        • dashed. Línea discontinua.
+    El siguiente ejemplo muestra el aspecto de cada tipo de borde, aplicado a una etiqueta "h1":
+    </p>
+
+    <img src="./imagenes/libro70.png" height="80" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Como puede observar, en el cuerpo del mensaje hay cuatro encabezados "h1", cada uno de los cuales tiene un atributo id, cuyo valor coincide con el del estilo que se le quiere dar (este valor podría haber sdo cualquier otro).
+        En la cabecera del documento se establece una regla de estilo que centra y escribe de color azul todos los ecabezados "h1" (su selector es el nombre de dicha etiqueta). Las siguientes reglas asignan un valor diferente a la propiedad border-style. 
+        El resultado se puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro71.png" height="260" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Tambien es posible establecer bordes 3D con los valores groove, ridge, inset y outset. Le animo a que experimente con ellos, si bien el efecto producido será diferente según el ancho o el color del borde.
+       Aunque en el ejemplo anterior se ha asignado un únicp valor a la propiedad border-style, al igual que sucedía con margin, esta propiedad también puede tener dos, tres o cuatro valores:
+    </p>
+
+    <img src="./imagenes/libro72.png" height="160" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Si es observador, se habrá dado cuenta de que en la imagen anterior el color del borde coincidía con el del elemento (en este caso, un texto). Si quiere que sea cualquier otro, deberá asignarselo empleando la propiedad border-color. Dicho color podrá ser el mismo o diferente en cada lado del elemento según el número de valores proporcionados:
+    </p>
+
+    <img src="./imagenes/libro73.png" height="160" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Otra de las características del borde que se puede modificar es el grosor de la línea, cuyo valor puede especificarse mediante la propiedad border-width como.
+       - Una longitud expresada en cualquier de las unidades de medida estudiadas.
+       - Las palabras clave que se representan anchos estándar: thick (grueso) medium (medio, valor por defecto), thin (delgado).
+       Al igual que las propieades anteriores, border-width también puede tomar de uno a cuatro valores con el fin de que el borde tenga el mismo o diferentes anchos a cada lado:
+    </p>
+
+    <img src="./imagenes/libro74.png" height="160" style="display: block; margin: auto;">
+
+     <p align="justify">
+        Con el fin de practicar con estas nuevas propiedades, escriba el siguiente documento HTML:
+    </p>
+
+    <img src="./imagenes/libro75.png" height="490" style="display: block; margin: auto;">
+
+    <p align="justify">
+        A diferencia del código anterior, el cuerpo de este documento HTML solo contiene tres encabezados "h1", cada uno con su correspondiente identificador (atributo id).
+
+        En la cabecera, la regla de estilo que afecta a las etiquetas "h1" se utiliza para mostrar los encabezados en color azul (propiedad color),
+
+        centrarlos horizontalmente (propiedad text-align) y dibujar un borde con un tipo de línea continua (propiedad border-style). El resto de reglas tienen como selector uno de los identificadores de dichos encabezados. La primera (selector "rojo") usa la propiedad border-color para pintar el borde de color rojo (en vez de azul, como el texto). La segunda y la tercera regla establecen el acho de la línea, el mismo para todos los lados en el primer caso (selector "ancho1"); y el mismo arriba y abajo, pero diferente del existente a izquierda y derecha en el segundo (selector "ancho2").
+        El resultado obtenido se puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro76.png" height="270" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Cuanto se especifican las características visuales de un borde, generalmente se indica su tipo, grosor y/o color. Por ese motivo, en vez de las propiedades border-style, border-width y border-color se emplea únicamente border con el siguiente formato:
+
+       border ancho estilo color 
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   A este tipo de propiedades que combinan y sustituyen otras diferentes, se les conoce como atajos (shorthand en inglés).
+    </div>
+    </div>
+
+    <p align="justify">
+       Así, el siguiente código muestra dos imágenes con un borde sólido de color rojo y 5 píxeles de grosor: 
+    </p>
+
+    <img src="./imagenes/libro77.png" height="300" style="display: block; margin: auto;">
+
+    <p align="justify">
+       El cuerpo del documento está formado por dos imágenes (etiquetas "img") cuyos atributos src delatan que se trata de la Fontana de Trevi y el Coliseo. En el bloque de declaraciones de la regla de estilo asociada a esta etiqueta se encuentra la propiedad border con la que se establece el tipo, el grosor y el color del borde que las rodea. De forma adicional, se ha establecido que las imágenes tengan 200 píxeles el ancho (propiedad width) y unos márgenes internos y externos de 20 píxeles de grosor (propiedades padding y margin).
+       El resultado lo puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro78.png" height="270" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Dicho código nos sirve también para calcular la separación entre amabs imágenes. Para ello, tiene que saber que el tamaño de un elemento HTML viene determinado por:
+    </p>
+
+    <img src="./imagenes/libro79.png" height="270" style="display: block; margin: auto;">
+
+    <p align="justify">
+       A continuación, se meustra gráficamente el tamaño real de cada imagen mediante una línea de puntos.
+    </p>
+
+    <img src="./imagenes/libro80.png" height="270" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Según el gráfico anterior, se deduce que las fotos de ambas imágenes están separadas una distancia de:
+    </p>
+
+    <img src="./imagenes/libro81.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+       Si las imágenes se hubieran situado una debajo de la otra (en el sigueitne capítulo sabrá cómo hacerlo), el margen exterior inferior de la primera no se habría sumado al superior de la segunda, sino que se toamría el mayor de los dos:
+    </p>
+
+    <img src="./imagenes/libro82.png" height="290" style="display: block; margin: auto;">
+
+    <p align="justify">
+      En ese caso, la distancia de separación sería:
+    </p>
+
+    <img src="./imagenes/libro83.png" height="80" style="display: block; margin: auto;">
+
+    <p align="justify">
+      Este mismo tipo de cálculos será el que tenga que realizar para establecer la distancia de separación de cualquier otro tipo de elementos HTML, ya sean imágenes, textos, listas, hipervínculos o contenedores.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Como puede apreciar en la imagen anterior, el navegador añade por defecto un margen en el lado superior y otro en el izquierdo.
+    </div>
+    </div>
+
+    <p align="justify">
+     Si los bordes de todos los elementos de una página son iguales, podría pensar en añadir la propiedad border a una regla de estilo cuyo selector sea el nombre de la etiqueta "body", en vez de repetirlo en las reglas asociadas a los elementos que contenga. No lo haga, ya que, en ese caso, sería la propia página el que tendría el borde, no los elementos contenidos (el borde no es heredable). Para demostrarlo, sustituya las reglas de estilo del código anterior por estas otras:
+    </p>
+
+    <img src="./imagenes/libro84.png" height="180" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Ahora, las propiedades que deﬁnen el borde y los márgenes interiores y exteriores se llevan a la regla asociada a la etiqueta "body". En la regla de estilo de la imagen solo queda la declaración que determina su ancho. Observe el resultado que se obtiene al refrescar la página.
+    </p>
+
+    <img src="./imagenes/libro85.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Como se había avanzado, el borde rodea a la página, no a cada elemento por separado. Además, los márgenes internos ahora hacen referencia a la separación del contenedor que representa el cuerpo del documento (etiqueta "body") con las imágenes en la parte interior del borde (propiedad padding) y con los lados de la ventana del navegador en la parte exterior (propiedad margin). La siguiente imagen lo muestra gráﬁcamente.
+    </p>
+
+    <img src="./imagenes/libro86.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     A diferencia del ejercicio anterior, en esta ocasión el navegador no añade ningún espacio en la parte superior, derecha ni izquierda de la ventana, ya que estos se han ﬁjado explícitamente en la propia etiqueta "body" con la propiedad margin. Por ese motivo, si asignara un valor de 0 píxeles a dicha propiedad, comprobaría que las esquinas superior izquierda y derecha del borde coinciden con las de la ventana del navegador, tal como se puede conﬁrmar a continuación:
+    </p>
+
+    <img src="./imagenes/libro87.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Por supuesto, este mismo razonamiento es válido para los elementos que haya dentro de cualquier contenedor, ya sea semántico o genérico. La última propiedad que se va a estudiar es border-radius, cuyo valor es el radio del arco de la circunferencia con el que se redondean las esquinas del borde. Este podrá expresarse como una longitud (en cualquiera de las unidades estudiadas) o un porcentaje. Además, y de forma similar al resto de propiedades, el arco también podrá ser el mismo o diferente en cada esquina según el número de valores que se le asigne:
+    </p>
+
+    <img src="./imagenes/libro88.png" height="180" style="display: block; margin: auto;">
+
+    <p align="justify">
+     El siguiente código muestra un encabezado con un borde que tiene las esquinas redondeadas:
+    </p>
+
+    <img src="./imagenes/libro89.png" height="380" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Como puede comprobar, en el cuerpo del documento solo hay un encabezado "h1" cuyo aspecto se deﬁne en la cabecera del documento con una regla de estilo. En ella, se establece un color de fondo negro que destaque el texto escrito en color blanco (propiedades background-color y color). Como los encabezados ocupan por defecto todo el ancho de la pantalla, se asigna el valor fit-content a la propiedad width para que se ajuste al texto. Además, se especiﬁca un margen interior de 10 píxeles (propiedad padding) que adopta el color del fondo. La última propiedad (border-radius) redondea las esquinas con un radio de 20 píxeles. A continuación se puede ver el resultdo obtenido:
+    </p>
+
+    <img src="./imagenes/libro90.png" height="230" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Cuando se utilizan bordes redondeados, se pueden crear efectos muy originales. Por ejemplo, sustituya en la regla de estilo del código anterior el valor de la propiedad border-radius por este otro:
+    </p>
+  
+    <img src="./imagenes/libro91.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Ahora, el resultado es completamente diferente.
+    </p>
+
+    <img src="./imagenes/libro92.png" height="230" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Finalmente, realice un último cambio en el valor de esta misma propiedad:
+    </p>
+
+    <img src="./imagenes/libro93.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Como se puede apreciar en esta otra imagen, el aspecto del encabezado cambia radicalmente.
+    </p>
+
+    <img src="./imagenes/libro94.png" height="230" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Los bordes rectos también pueden jugar un papel importante, por ejemplo, a la hora de destacar un capítulo del resto de secciones del libro, tal como se puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro95.png" height="270" style="display: block; margin: auto;">
+
+    <p align="justify">
+     El código utilizado para obtener este resultado es el siguiente:
+    </p>
+
+    <img src="./imagenes/libro96.png" height="370" style="display: block; margin: auto;">
+
+    <p align="justify">
+     En el cuerpo del documento hay un encabezado "h1" que representa el capítulo y otro "h2" la sección. El aspecto con el que se quiere mostrar el texto del capítulo se deﬁne en una regla de estilo donde la propiedad border-left especiﬁca un borde sólido en el lado izquierdo de color negro y 10 píxeles de grosor, en tanto que la propiedad padding añade un margen interno de 10 píxeles para que la línea con la que se dibuje sea más alta y quede más separada del texto (el tamaño del encabezado crece internamente a lo alto y a lo ancho). La siguiente imagen representa gráﬁcamente este efecto:
+    </p>
+
+    <img src="./imagenes/libro97.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Le animo a que experimente con estas propiedades y descubra por sí mismo las innumerables formas en las que se puede llegar a mostrar un mismo elemento. Es el mejor modo de crear un estilo particular que dote a sus páginas de carácter propio.
+    </p>
+
+    <h2 align="center">3.3.4 Box sizing</h2>
+
+    <p align="justify">
+     Hasta ahora, el tamaño de los elementos se establecía con las propiedades width y height. Sin embargo, tal como se apuntó al describir el modelo de caja, el valor asignado a dichas propiedades hace referencia solo al contenido, ya que no se tiene en cuenta el espacio de los márgenes internos o el grosor de los bordes. Esto es un grave inconveniente cuando se quieren alinear elementos o a la hora de realizar un diseño, en el que es necesario trabajar con su tamaño real (no solo el de su contenido). 
+     Para resolver este problema, HTML proporciona la propiedad box- sizing, que indica al navegador cómo calcular el tamaño del elemento. Puede tomar los siguientes valores: 
+     • content-box. Solo se tiene en cuenta el ancho y el alto del contenido del elemento (son los especiﬁcados mediante las propiedades width y height). Es el valor por defecto. 
+     • border-box. El tamaño del elemento incluye los márgenes internos y los bordes.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Al igual que otras muchas propiedades, esta también puede tomar el valor inherit o initial.
+    </div>
+    </div>
+
+    <p align="justify">
+     Para entender la importancia de esta propiedad se utilizará el siguiente código de ejemplo, en el que se meustran dos párrafos aparentemente iguales:
+    </p>
+
+    <img src="./imagenes/libro98.png" height="370" style="display: block; margin: auto;">
+
+    <p align="justify">
+     Aunque parezca que ambos párrafos ocupan el mismo espacio (500 × 100 píxeles, especiﬁcado mediante las propiedades width y height), no es así porque el primero tiene un margen interno de 10 píxeles y el segundo de 40 píxeles (propiedad padding). Para demostrarlo, se ha dibujado un borde (propiedad border) que delimita el área de cada párrafo, tal como puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro99.png" height="280" style="display: block; margin: auto;">
+
+    <p align="justify">
+     si quiere que el área qeu ocupen sea realmente la misma, deberá añadir la siguiente declaración al estilo de ambos párrafos:
+    </p>
+
+    <img src="./imagenes/libro100.png" height="70" style="display: block; margin: auto;">
+    
+    <p align="justify">
+     Ahora, el valor asignado a las propiedades width y height no solo incluye el tamaño del contenido, sino también el ancho del margen interno y el del borde. Como resultado, esta vez los dos párrafos tendrán el mismo tamaño (500 × 100 píxeles).
+    </p>
+
+    <img src="./imagenes/libro101.png" height="270" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Para que la propiedad box-sizing surta efecto, asegúrese de que el valor asignado a la propiedad width sea mayor que la suma del ancho del contenido, los márgenes internos a derecha e izquierda y el grosor del borde en ambos lados (lo mismo sucedería con la propiedad heigth pero en sentido vertical). Téngalo en cuenta, porque es un error que suele dar muchos quebraderos de cabeza.
+    </div>
+    </div>
+</body>

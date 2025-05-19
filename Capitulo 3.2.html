@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.2 Colores</h2>
+
+    <p align="justify">
+       El empleo del color es imprescindible en el desarrollo de cualquier actividad cuyo objetivo sea la transmisión visual de información. Aunque la pintura es el arte en el que alcanza su mayor expresión, la creación de páginas web no deja de ser también un trabajo artístico. Por eso, aquellas que utilizan una combinación de colores inapropiada pueden provocar rechazo. En consecuencia, además de un diseño gráﬁco correcto, un buen sitio web siempre deberá disponer de una paleta de colores adecuada. En HTML cualquier elemento es susceptible de tener color, desde el utilizado para la tinta de un texto, pasando por el del borde de una imagen hasta el de fondo de un contenedor, por poner algún ejemplo. En todos estos casos, se tendrá que hacer uso de propiedades que irá conociendo poco a poco durante la lectura de este libro, aunque hay dos que destacan sobre las demás: • color. Establecen el color de tinta. • background-color. Determinan el color de fondo.
+
+       Ambas propiedades toman como valor un color, al que se identiﬁca por su nombre. La mayoría de los navegadores reconoce alrededor de 140 nombres de colores, entre los se encuentran el blanco (white), el negro (black), el rojo (red), el verde (green) o el azul (blue).
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    En 
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/color_value" target="_blank">
+      https://developer.mozilla.org/es/docs/Web/CSS/color_value
+    </a> 
+    Puede encontrar una lista completa con los nombres de todos los colores. A modo de ejemplo, a continuación puede ver los correspondientes a los distintos tonos de rosa:
+    </div>
+    </div>
+
+    <img src="./imagenes/libro30.png" height="290" style="display: block; margin: auto;">
+
+    <p align="justify">
+      Como ha practicado con ambas propiedades en secciones anteriores, ya sabe cómo utilizarlos. Sin embargo, aunque en un principio 140 colores le puedan parecer muchos, los ordenadores actuales pueden reproducir millones. Si quisiera utilizar cualquier de ellos, deberá conocer los espacios de color manejados por HTML.
+    </p>
+
+    <h2 align="center">3.2.1 Espacios de color</h2>
+
+    <p align="justify">
+     Aunque HTML identiﬁca muchos colores por su nombre, tarde o temprano querrá utilizar otros diferentes. Por ese motivo, debe saber que un color se puede especiﬁcar conforme a los siguientes espacios de color: 
+     • RGB (red, green y blue). Tal como indica este acrónimo, el color se descompone en los colores rojo, verde y azul. 
+     • HSL (hue, saturation y lightness). En este caso, el color se describe como una combinación de matiz, saturación y luminosidad. 
+     Empecemos estudiando el primero. 
+     Si es observador, en la imagen donde se mostraba el nombre de las diferentes tonalidades de rosa, a su lado también aparecía un código decimal y otro hexadecimal. En ambos casos, se trata de un valor RGB, es decir, una terna formada por tres números que representan la intensidad de los componentes rojo, verde y azul con los que se obtiene el color.
+    </p>
+
+    <img src="./imagenes/libro31.png" height="290" style="display: block; margin: auto;">
+
+    <p align="justify">
+     En CSS, la forma de especiﬁcar un color en formato RGB es: 
+     rgb(rojo, verde, azul) 
+     Cada uno de los valores de esta terna podrá variar entre 0 y 255. 
+     Cuando los tres colores tienen el máximo nivel de intensidad, se obtiene el color blanco, mientras que el nivel mínimo daría como resultado el negro. Si uno de los colores tuviera una intensidad máxima y el resto cero, se obtendría el color primario correspondiente (en estado puro). En resumen, los valores de estos colores serían los siguientes: 
+     • Blanco: rgb(255, 255, 255) 
+     • Negro: rgb(0, 0, 0) 
+     • Rojo: rgb(255, 0, 0) 
+     • Verde: rgb(0, 255, 0) 
+     • Azul: rgb(0, 0, 255)
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Los tonos de gris se obtienen cuando el nivel de los tres colores es el mismo. Cuanto más alto sea dicho valor, más claro será este. Por ejemplo, rgb(200, 200, 200) sería un gris claro mientras que rgb(50, 50, 50) sería oscuro.
+    </div>
+    </div>
+
+    <p align="justify">
+     La intensidad de cada color primario también se puede representar en formato hexadecimal. En ese caso, su valor no sería un número del 0 al 255, sino 2 caracteres cuyo valor puede ser 0, 1, 2, 3..., 8, 9, A, B, ..., E, F. Aunque no se describirá este sistema de numeración, a modo de ejemplo, el valor 0 decimal corresponde a 00 en hexadecimal y el 255 a FF. 
+     Cuando se utiliza la notación hexadecimal, la sintaxis con la que se especiﬁca un color es distinta a la decimal, ya que los valores de la intensidad de todos los colores van juntos y se preceden del carácter ‘#’. De ese modo, los colores de la lista anterior se escribirían así en hexadecimal: 
+     • Blanco: #FFFFFF 
+     • Negro: #000000 
+     • Rojo: #FF0000 
+     • Verde: #00FF00 
+     • Azul: #0000FF 
+     Si en vez del espacio de color RGB utilizara el HSL, la forma de especiﬁcar un color sería descomponiéndolo en su matiz, saturación y luminosidad. La siguiente imagen (tomada de <a href="https://es.wikipedia.org/wiki/Modelo_de_color_HSL" target="_blank">
+    https://es.wikipedia.org/wiki/Modelo_de_color_HSL
+  </a>) lo representa gráficamente.
+    </p>
+
+    <img src="./imagenes/libro32.png" height="290" style="display: block; margin: auto;">
+
+    <p align="justify">
+     El matiz se simboliza como un ángulo cuyos valores posibles van de 0 a 360°. Dentro de este rango, cada color primario (rojo, verde o azul) ocupa 360/3= 120°. Así, a partir del valor 0 se encontrarían los matices de rojo, en el 120 empezarían los de verde y en el 240 los de azul. 
+     La saturación representa la pureza del color, y sus valores posibles van del 0% al 100%. Cuanto menor sea la saturación de un color, mayor tonalidad grisácea tendrá y más decolorado estará. La siguiente imagen muestra gráﬁcamente este concepto aplicado al color azul, cuya saturación varía entre el 100% y 0% a intervalos del 20%.
+    </p>
+
+    <img src="./imagenes/libro33.png" height="90" style="display: block; margin: auto;">
+
+    <p align="justify">
+     La luminosidad determina el brillo de la imagen, que puede variar del 0 al 100%. Cuanto más alto sea este valor, más clara será la imagen, tal como se muestra a continuación, en la que esta varía en dicho rango a intervalos del 20%.
+    </p>
+
+    <img src="./imagenes/libro34.png" height="90" style="display: block; margin: auto;">
+
+    <p align="justify">
+    Observe que con un brillo del 0% la imagen es negra mientras que al 100% es blanca. Un color puro se obtiene con una luminosidad del 50%. 
+    La forma de especiﬁcar un color en formato HSL es: hsl(tono, saturación, luminosidad) 
+    De este modo, tomando de nuevo como ejemplo la lista de colores anterior, su valor en formato HSL sería: 
+    • Blanco: hsl(0, 0%, 100%) 
+    • Negro: hsl(0, 0%, 0%) 
+    • Rojo: hsl(0, 100%, 50%) 
+    • Verde: hsl(120, 100%, 50%) 
+    • Azul: hsl(240, 100%, 50%)
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+  En este caso, los tonos de gris se obtienen modiﬁcando la luminosidad, mientras el matiz y la saturación toman un valor del 0%. Cuanto más alto sea dicho valor, más claro será el gris resultante.
+    </div>
+    </div>
+
+     <p align="justify">
+  Para conocer los valores RGB o HSL que debe tener un color determinado, deberá utilizar una herramienta que le permita seleccionarlo y genere como salida estos valores en ambos espacios de color. En Internet existen muchas de carácter gratuito, como la mostrada en la siguiente imagen
+ <a href="(https://htmlcolorcodes.com/color-picker/):" target="_blank">
+    (https://htmlcolorcodes.com/color-picker/)
+  </a>
+    </p>
+
+    <img src="./imagenes/libro35.png" height="290" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+  Si utiliza el editor Visual Studio Code, al escribir el nombre de la propiedad color se despliega un menú contextual cuyas opciones son los nombres de los distintos colores que le puede asignar. Una vez elegido uno de ellos, al situar el ratón encima aparece un selector de color que le permitiría personalizarlo como quiera.
+    </div>
+    </div>
+
+     <p align="justify">
+    Una vez seleccionado el punto donde está el color señalado por la ﬂecha, en la parte superior se muestra, de izquierda a derecha, el color elegido, el valor hexadecimal y decimal de los componentes RGB, así como el de los componentes HSL.
+
+    En el siguiente código de ejemplo se muestran tres encabezados de color verde, cuyo valor se establece en los espacios de color que se acaban de describir:
+    </p>
+
+    <img src="./imagenes/libro36.png" height="190" style="display: block; margin: auto;">
+
+    <p align="justify">
+    El resultado obtenido demuestra que las tres formas de especiﬁcar un color son equivalentes.
+    </p>
+
+    <img src="./imagenes/libro37.png" height="360" style="display: block; margin: auto;">
+
+    <h2 align="center">3.2.2 Transparencias</h2>
+
+    <p align="justify">
+    HTML permite deﬁnir el nivel de transparencia de un color. Para ello, solo debe incorporar el parámetro alpha en su especiﬁcación. Este valor es decimal y está comprendido entre 0 (transparente) y 1 (sólido). 
+    
+    El parámetro alpha se puede añadir tanto en el modelo de color RGB como HSL. En ese caso, la sintaxis que deberá emplear será la siguiente: 
+    rgba(rojo, verde, azul, alpha) 
+    hsl(tono, saturación, luminosidad, alpha) 
+    En el siguiente código de ejemplo se utiliza este parámetro para mostrar cinco encabezados "h1" que se van haciendo transparentes de forma progresiva:
+    </p>
+
+    <img src="./imagenes/libro38.png" height="450" style="display: block; margin: auto;">
+
+    <p align="justify">
+   Como puede observar, el color de los encabezados "h1" se especiﬁca con una notación RGBA. El valor de los componentes rojo y verde es 0 mientras que el del azul tiene el valor máximo (255), motivo por el que estos tendrán dicho color. El valor del parámetro alpha decrece a intervalos de 0.25, por lo que el texto de los encabezados se va difuminando de forma gradual hasta dejar de verse (el último es completamente transparente). Ese es el motivo de que en la siguiente imagen solo aparezcan cuatro de los cinco encabezados que componen el cuerpo del documento HTML.
+    </p>
+
+    <img src="./imagenes/libro39.png" height="260" style="display: block; margin: auto;">
+</body>

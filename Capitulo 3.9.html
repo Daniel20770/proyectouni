@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.9 VALORES POR DEFECTO Y HEREDADOS</h2>
+
+  <p align="justify">
+  En las secciones anteriores se han descrito las propiedades que se emplean con más frecuencia para determinar el aspecto de los elementos mostrados en una página web. Cada una de ellas podía tomar un conjunto de valores, entre los que generalmente se encontraban los siguientes: 
+  • initial. Restablece el valor por defecto. 
+  • inherit. Utiliza el valor heredado del contenedor al que pertenece. 
+  Cuando se añade una etiqueta al cuerpo de un documento HTML, esta se muestra en la ventana del navegador de una forma predeterminada. Al asignar un valor a cualquiera de sus propiedades, lo que está haciendo es modiﬁcar dicho aspecto. Si en algún momento quisiera volver a recuperarlo, no tendría por qué conocer cuál era, ya que bastaría con asignarle el valor initial. Si, por el contrario, lo que deseara es utilizar el heredado del contenedor donde se encuentra, el valor que debería asignarle es inherit. 
+  El siguiente código muestra un sencillo, pero representativo, ejemplo de uso de este valor:
+  </p>
+
+  <img src="./imagenes/libro158.png" height="130" style="display: block; margin: auto;">
+
+  <img src="./imagenes/libro159.png" height="570" style="display: block; margin: auto;">
+
+  <p align="justify">
+  A continuación, se muestra el aspecto de esta página:
+  </p>
+
+  <img src="./imagenes/libro160.png" height="270" style="display: block; margin: auto;">
+
+  <p align="justify">
+  Analicemos el código de este documento HTML para descubrir el motivo del color y el tamaño adoptado por cada uno de los párrafos. 
+  En la cabecera se deﬁnen dos estilos: uno para los párrafos y otro para los contenedores. El de los párrafos establece un tamaño de fuente de 30 píxeles y un color de texto gris claro (propiedades font-size y color), mientras que el de los contenedores determina únicamente un tamaño de fuente de 20 píxeles. 
+  El cuerpo del documento está formado por cuatro párrafos, dos de los cuales están dentro de un contenedor "div". 
+  El primer párrafo se muestra tal como se ha establecido en la cabecera (con un tamaño de 30 píxeles y un color de texto gris claro). El segundo párrafo, aunque está dentro del contenedor, sigue el mismo estilo. 
+  El tercer párrafo hereda del contenedor el tamaño de la fuente (se ha asignado a la propiedad font-size el valor inherit), que es de solo 20 píxeles, motivo por el que se muestra más pequeño. El color sigue siendo el del estilo especiﬁcado para los párrafos en la cabecera del documento. 
+  El último párrafo, que no está dentro del contenedor, restituye el color por defecto de los párrafos (la propiedad color toma el valor initial), motivo por el que aparece en negro. El tamaño de la fuente sigue siendo el establecido en la regla de estilo, es decir, de 30 píxeles.
+  </p>
+</body>
+</html>

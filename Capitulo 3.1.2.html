@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h2 align="center">3.1.2 Reglas de estilo</h2>
+<p align="justify">
+    En general, las paginas web están fromadas por multitu de etiquetas, por lo que asignarles unestilo de forma individual sería una labor tediosa y propensa a fallos. 
+    Ademas, cuando se quisiera renovar el aspecto de una página, habría que modificar el estilo de todas las etiquetas, lo que supondría un enorme esfuerzo. No menos importante es el hecho de que , cuando se utilizan estilos en línea, se está mezclando el contenido con la forma de presentarlo. Eso tiene muchas desventajas, ya que en los sitios webs profesionales la persona que edita dicho contenido no tiene por qué ser la responsable de darle formato, algo que formaría parte de la labor de un diseñador gráﬁco.
+
+    Para evitar estos incovenientes, CSS permite la creación de reglas de estilo que sacan del cuerpo del documento HTML componen la página y lo llevan a la cabecera,dentro de la etiqueta style, tal como puede ver a continuación:
+</p>
+<img src="./imagenes/libro4.png" height="180" style="display: block; margin: auto;">
+
+<p align="justify">
+    Una regla de estilo está formada por un selector y un bloque de declaraciones (pares propiedad:valor). El selector será el que determine el conjunto de elementos sobre los que se aplica la regla y las declaraciones especiﬁcan su aspecto visual. Su sintaxis es la siguiente:
+</p>
+<img src="./imagenes/libro3.png" height="180" style="display: block; margin: auto;">
+
+<style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    Olvidarse de escribir el punto y coma (‘;’) al ﬁnal de cada declaración puede provocar errores difíciles de detectar.
+    </div>
+    </div>
+
+    <p align="justify">
+        Existen múltiples clases de selectores, pero los principales son:
+        - Etiqueta. El bloque de declaraciones afecta a todas las etiquetas de un tipo.
+        - Identificador. La regla solo se aplica a la etiqueta que tenga dicho identificador.
+        - Clase. Su efecto se extiende únicamente a las etiquetas vinculadas a esa clase.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    Un selector muy especial es el universal, representado por un asterisco (‘*’), que aplica la regla a todos los elementos de la página.
+    </div>
+    </div>
+
+    <p align=" justify">
+        En los sigueintes apartados aprenderá a crear reglas de estilo utilizando estos tres tipos de selectores.
+    </p>
+
+    <h2 align="center">3.1.2.1 Selector de etiqueta</h2>
+
+    <p align="justify">
+        Un selector de etiqueta asocia una regla de estilo a una etiqueta, pero no a una en concreto (como sucedía cuando se utilizaba el atributo style) sino a todas ellas.
+
+        El sigueinte código de ejemplo contiene una regla de estilo, cuyo selector de etiqueta establece la forma en la que se tiene que msotrar los ecabezados de segundo nivel:
+    </p>
+    <img src="./imagenes/libro2.png" height="400" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Como puede observar en la cabecera del documento HTML (dentro de la etiqueta style) se ha definido una regla de estilo cuyo selector es h2, por lo que afecta a todos los encabezados de segundo nivel (texto de las etiquetas h2). El valor asignado a las propiedades color y background-color determina que estos se escriban en color azul sobre un fonfo amarillo.
+
+        Le habrá llamado la atención el texto situado sobre la regla de estilo:
+    </p>
+
+<img src="./imagenes/libro9.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Se trtara de un comentario CSS. Este no es interpretado por el navegador, ya que su finalidad es proporcionar información que permita entender las relgas de estilo y facilitar su posterior mantenimiento. Tiene una sintaxis diferente de la de los comentarios HTML, motivo por el que debe ir siempre dentro de la etiqueta style. 
+
+        El cuerpo del documento está compuesto por un encabezado principla h1 y dos de segundo nivel h2. Como puede comprobar en la siguiente imagen, estos últimos se escriben en color azul sobre un fondo amarillo.
+    </p>
+
+    <img src="./imagenes/libro10.png" height="370" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Si hubiera más encabezados h2, todos se mostrarían de la misma forma.
+    </p>
+
+    <h2 align="center">3.1.2.2 Selector de identificador</h2>
+
+    <p align="justify">
+        Cuando se utiliza un selector de etiqueta, la regla de estilo se aplica al contenido de todas las etiquetas de ese tipo. Sin embargo, a veces se quiere que el estilo afecte solo a una etiqueta en concreto (no a todas ellas). Una forma de hacerlo sería mediante el atributo style de la etiqueta afectada. Pero si preﬁere usar una regla de estilo por las ventajas que ello supone, deberá asignarle un identiﬁcador (entre comillas) con el atributo id: etiqueta id: "identificador". 
+        Posteriormente, dicho identiﬁcador (sin las comillas) se utilizaría como selector en la regla de estilo, precedida del carácter ‘#’: #identiﬁcador
+    </p>
+
+     <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    El valor de un id no se puede repetir. Debe ser único para cada elemento HTML.
+    </div>
+    </div>
+
+    <p align="justify"> 
+        Con el ﬁn de entender la forma de sustituir el atributo style de una etiqueta por una regla de estilo cuyo selector sea un identiﬁcador, este primer código de ejemplo muestra un párrafo compuesto de una línea escrita en color blanco sobre un fondo negro: 
+    </p>
+
+    <img src="./imagenes/libro11.png" height="370" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Como puede observar, el aspecto del párrafo se determina en línea mediante el atributo style en la propia etiqueta (p), para lo que se emplean las propiedades color y background-color. Una vez cargado el código en el navegador, vería lo siguiente:
+    </p>
+
+    <img src="./imagenes/libro12.png" height="150" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Ahora sustituya el documento HTML anterior por este otro:
+    </p>
+
+    <img src="./imagenes/libro13.png" height="350" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Aunque este código es diferente del anterior, el navegador mostrará el mismo resultado. El moetivo es porque las declaraciónes de estilo del párrafo siguen siendo las mismas. Lo unico que se ha hecho es trasladarlas de la propia etiqueta a una relga de estilo, cuyo selector es el identificador "blanco-y-negro" que previamente se le ha asignado mediante el atributo id.
+    </p>
+     <h2 align="center">3.1.2.3 Selector de clase</h2>
+
+    <p align="justify">
+        Tal como se expuso en el capítulo anterior, cuando se quiere aplicar un mismo un estilo a un grupo de elementos HTML (div) en el que se deﬁna dicho estilo. La única condición (limitación) es que deben ir juntos en el documento HTML (unos debajos de otros).
+        Esto es lo que se ha hecho en el sigueinte código dee ejemplo: 
+    </p>
+
+    <img src="./imagenes/libro14.png" height="350" style="display: block; margin: auto;">
+    <p align="justify">
+        Como puede apreciar, el cuerpo del documento se compone de un primer y último párrafo sin estilo, entre los cuales se sitúa un contenedor en el que se ha utilizado su atributo style para especiﬁcar un color de tinta azul y otro de fondo amarillo (propiedades color y background-color). Dicho estilo será el heredado por los párrafos que contiene, tal como puede ver a continuación:
+    </p>
+
+    <img src="./imagenes/libro15.png" height="350" style="display: block; margin: auto;">
+
+     <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+    No todas las propiedades se heredaran
+    </div>
+    </div>
+
+    <p align="justify">
+        Sin embargo, en muchas ocasiones los elementos que comparten un mismo estilo no pueden agruparse (están repartidos por toda la página). En ese caso, deberá vincularlos a una clase. Para asociar una etiqueta a una clase deberá asignar su nombre (entre comillas) al atributo class.   
+    </p>
+
+    <img src="./imagenes/libro16.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Posteriormente, dicho nombre (sin las comillas) se utilizará como selector en una regla de estilo, procedida de un punto (‘.’):.clase
+
+        Una etiqueta se puede asociar a varias clases. Para ello, solo tiene que separarlas por un espacio:
+
+
+    </p>
+
+    <img src="./imagenes/libro17.png" height="60" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Para saber cómo se utiliza este nuevo atributo, en el siguiente ejercicio se crean dos reglas de estilo cuyos selectores son clases, en cada una de la cuales se especiﬁca un color de tinta y de fondo diferente. Así, los párrafos de la página se mostrarán de una u otra forma según la clase a la que se hayan vinculado, tal como puede ver a continuación, donde se han intercalado párrafos de ambos estilos:
+    </p>
+    
+    <img src="./imagenes/libro18.png" height="310" style="display: block; margin: auto;">
+
+    <p align="justify">
+        El código con el que se ha conseguido el resultado anterior es el siguiente:
+    </p>
+
+    <img src="./imagenes/libro19.png" height="350" style="display: block; margin: auto;">
+
+    <img src="./imagenes/libro20.png" height="350" style="display: block; margin: auto;">
+
+    <p align="justify">
+        En esta ocasión no tiene sentido utilizar un contenedor div, por lo que a cada párrafo se le asocia la clase que determina el estilo con el que se quiere mostrar (se asigna el valor “blanco-y-negro” o “azul-y- amarillo” al atributo class). Los nombres de estas clases se utilizan como selectores de dos reglas de estilo, en cuyo bloque de declaraciones se asigna el color correspondiente a las propiedades color y background-color.
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Además de una clase, un selector puede estar compuesto por pseudoclases que permitan restringir la aplicación de una regla solo a los elementos que estén en un determinado estado (por ejemplo, cuando el ratón se sitúe por encima o se pulsen). En esta obra solo se emplearán en el contexto de los hipervínculos, por lo que su estudio se aplaza a la sección dedicada a estos elementos.
+    </div>
+    </div>
+
+    <h2 align="center">3.1.2.4 Selectores compuestos</h2>
+
+    <p align="justify">
+        En todos los ejercicios realizados hasta el momento, las reglas de estilo utilizaban selectores simples. Sin embargo, estos se pueden combinar mediante operadores que amplían o restringen los elementos a los que tiene que aplicarse. Aunque CSS dispone de diversos operadores, los selectores compuestos más comunes son: 
+        • Selector de combinación. El bloque de declaraciones actúa sobre los elementos HTML afectados por cada uno de los selectores simples. Utiliza el operador coma (‘ ,’). selector_simple, selector_simple, ... 
+        • Selector anidado. El bloque de declaraciones aplica solo a los elementos HTML del selector de la derecha que están incluidos en los de la izquierda (necesariamente tendrán que ser contenedores). En este caso, el operador empleado es el espacio (‘ ’). 
+        selector_simple selector_simple ...
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si alguno de los selectores simples no tuviera la sintaxis correcta, la regla no se aplicaría a ningún elemento HTML.
+    </div>
+    </div>
+
+    <p align="justify">
+        Si olvidara el espacio o la coma entre los selectores simples, y estos fueran clases (no tiene sentido con identiﬁcadores y etiquetas), la regla aplicaría a los elementos HTML que estuvieran vinculados a dichas clases (a todas, no solo a alguna): .clase1.clase2...
+    </p>
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Si alguno de los selectores simples no tuviera la sintaxis correcta, la regla no se aplicaría a ningún elemento HTML.
+    </div>
+    </div>
+
+    <p align="justify">
+        Seguramente tenga dudas sobre la aplicación práctica de este tipo de selectores, así que, como la mejor forma de aprender es practicando, en el siguiente código de ejemplo se empieza haciendo uso del primer selector (el de combinación):
+    </p>
+
+    <img src="./imagenes/libro21.png" height="350" style="display: block; margin: auto;">
+
+    <p align="justify">
+        El cuerpo del documento HTML está formado únicamente por dos encabezados, uno de cada tipo (h1 y h2). En la cabecera, la única regla de estilo tiene un bloque de declaraciones en el que se establece un color de tinta azul (la propiedad color tiene el valor blue). Como el selector es de combinación, dicho color se aplica a ambas etiquetas, tal como puede ver a continuación.
+    </p>
+
+    <img src="./imagenes/libro22.png" height="140" style="display: block; margin: auto;">
+
+    <p align="justify">
+        La principal ventaja de este tipo de selectores es la de evitar tener que repetir reglas con el mismo bloque de declaraciones (en este caso, se evita tener una regla para las etiquetas h1 y otra para h2). Ahora, modiﬁque el código HTML anterior para obtener este otro:
+    </p>
+
+    <img src="./imagenes/libro23.png" height="350" style="display: block; margin: auto;">
+
+    <img src="./imagenes/libro23.2.png" height="50" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Lo primero que se ha hecho es añadir la siguiente regla de estilo a continuación de la existente en el documento HTML original:
+    </p>
+
+    <img src="./imagenes/libro24.png" height="70" style="display: block; margin: auto;">
+
+    <p align="justify">
+        En ella se establece un color de fondo amarillo (se asigna el valor yellow a la propiedad background-color). El selector está formado por una clase (“fondo-amarillo”) y el nombre de una etiqueta (h1) separados por un espacio. Por lo tanto, al tratarse de un selector anidado, esta regla solo aplicará a las etiquetas "h1" que estén dentro de algún contenedor que pertenezca a dicha clase. El cuerpo de este nuevo documento HTML mantiene el encabezado "h1" inicial y "h2" ﬁnal del documento original. Sin embargo, en medio se ha incorporado un contenedor "div" dentro del que hay otra pareja de encabezados "h1" y "h2". Además, dicho contenedor se ha vinculado a la clase “fondo-amarillo” mediante el atributo class. Como la nueva regla de estilo afecta a cualquier elemento "h1" que esté dentro de otro perteneciente a dicha clase, el que hay dentro del contenedor se mostrará con un color de fondo amarillo, mientras que el de fuera lo hará como antes (solo con un color de tinta azul, al igual que el resto de encabezados "h2").
+    </p>
+
+     <img src="./imagenes/libro25.png" height="270" style="display: block; margin: auto;">
+
+    <style>
+    .info-box {
+    border: 2px solid #65e8fa;
+    background-color: rgb(244, 253, 118);
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 350px;
+    font-family: sans-serif;
+    margin: 20px auto; /*centra horizontalmente*/;
+    }
+   </style>
+    <div class="info-box">
+    <div class="info-text" align="justify">
+   Observe que el color del texto del encabezado "h1" que hay dentro del contenedor sigue siendo azul. Eso es debido a que se le han aplicado las dos reglas de estilo, a diferencia del resto de encabezados, en los que solo tiene efecto la primera.
+    </div>
+    </div>
+
+    <p align="justify">
+        En este caso, como el documento HTML solo tiene un contenedor "div", la siguiente regla de estilo tendría el mismo efecto:
+    </p>
+
+    <img src="./imagenes/libro26.png" height="90" style="display: block; margin: auto;">
+
+    <p align="justify">
+        Si lo hiciera así y añadiera más contenedores "div", todos los encabezados "h1" que estuvieran dentro de cualquier de ellos tendrían un color de fondo amarillo (naturalmente, ya no haría falta asociar dichos contenedores a ninguna clase). Pero si la regla solo tuviera que aplicarse a un determinado grupo de contenedores (no a todos), no le quedaría más remedio que utilizar de nuevo selectores de clase.
+    </p>
+</body>
