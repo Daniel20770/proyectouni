@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad 2 - Proyecto Web</title>
-    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bienvenido - Aprende HTML y CSS</title>
+    <link rel="stylesheet" href="estilos1.css" />
 </head>
 <body>
-    <header>
-        <h1>HTML y CSS como nunca antes se lo habían contado</h1>
-        <h2>Estructura de una página web</h2>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Aprende HTML y CSS</h1>
+            <p>Explora el desarrollo web desde cero con este recurso educativo fácil de seguir.</p>
+            <a href="#unidades" class="btn-principal">Comenzar</a>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="intro">
+            <h2>¿Por qué aprender desarrollo web?</h2>
             <p>
-                En el mundo actual resulta casi impensable vivir al margen de Internet. Desde una simple búsqueda, pasando por la consulta de las últimas novedades en redes sociales, hasta la realización de gestiones o compras online, siempre hay algún motivo para conectarse. En la mayoría de estos casos, lo que está haciendo es realizar una petición a un servidor que devuelve como resultado una página web con la información solicitada. Quizás piense que el desarrollo de estas páginas sea algo complejo, solo al alcance de especialistas con conocimientos de programación. Pero nada más lejos de la realidad, porque para crear páginas web no es necesario ser un experto en este campo. Únicamente deberá saber lo imprescindible de HTML y CSS. En este libro aprenderá a desarrollar sus propias páginas web sin conocimientos previos, desde cómo estructurar la información con HTML hasta cómo darle el aspecto deseado con CSS. Incluso tendrá ocasión de utilizar un servicio de hosting web que le permitirá acceder a ellas desde cualquier dispositivo en cualquier lugar.
+                Hoy en día, el desarrollo web es una habilidad clave. Desde leer noticias hasta realizar compras en línea, casi todo gira en torno a páginas web. Con HTML y CSS, puedes crear tus propias páginas desde cero, sin necesidad de experiencia previa.
+                <br><br>
+                Este sitio te guiará paso a paso para que aprendas a estructurar contenido con HTML y estilizarlo visualmente con CSS, de manera práctica y sencilla.
             </p>
         </section>
 
-        <section>
-            <h2>Unidades</h2>
-            <div class="links">
-                <a href="Unidad 1.html">Unidad 1</a>
-                <a href="Unidad 2.html">Unidad 2</a>
-                <a href="Unidad 3.html">Unidad 3</a>
-                <a href="Unidad 4.html">Unidad 4</a>
+        <section class="unidades" id="unidades">
+            <h2>Explora las Unidades</h2>
+            <div class="grid-unidades">
+                <a href="Unidad 1.html" class="card">Unidad 1</a>
+                <a href="Unidad 2.html" class="card">Unidad 2</a>
+                <a href="Unidad 3.html" class="card">Unidad 3</a>
+                <a href="Unidad 4.html" class="card">Unidad 4</a>
             </div>
         </section>
     </main>
 
+    <footer class="footer">
+        <p>© 2025 Aprende HTML y CSS | Introducción a los sistemas de cómputo</p>
+    </footer>
 </body>
 </html>
